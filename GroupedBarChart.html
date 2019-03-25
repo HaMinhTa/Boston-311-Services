@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+
+  h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: steelblue;
+    text-align: center;
+  }
+
+  svg {
+    display: block;
+    margin: auto;
+  }
+
+  </style>
+
+
+</head>
+<body>
+  <h1> Number of Calls by Boston Neighborhoods </h1>
+  <script>
+
+  // Generate svg
+
+  var margin = {top: 20, right: 20, bottom: 20, left: 50};
+      width = 1200;
+      height = 500;
+
+  var svg = d3.select("body")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      // .append("g")
+      // .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+  // Define data
+
+  var data = [
+    {area: "Dorchester", calls: 17120, calls2: 17847},
+    {area: "Roxbury", calls: 10053, calls2: 12219},
+    {area: "Allston", calls: 9611, calls2: 10553},
+    {area: "West Roxbury", calls: 8039, calls2: 9867},
+    {area: "Jamaica Plain", calls: 7888, calls2: 8920},
+    {area: "East Boston", calls: 7622, calls2: 7599},
+    {area: "South Boston", calls: 7511, calls2: 7154},
+    {area: "Greater Mattapan", calls: 6675, calls2: 7084},
+    {area: "Hyde Park", calls: 6474, calls2: 5906},
+    {area: "Roslindale", calls: 6218, calls2: 5171},
+    {area: "Downtown", calls: 5461, calls2: 5171},
+    {area: "Back Bay", calls: 4599, calls2: 4865},
+    {area: "South End", calls: 4200,calls2: 4763},
+    {area: "Charleston", calls: 3439, calls2: 4359},
+    {area: "Fenway", calls: 2431, calls2: 4350},
+    {area: "Beacon Hill", calls: 2105, calls2: 3509},
+    {area: "Mission Hill", calls: 2092, calls2: 2583},
+    {area: "Brighton", calls: 362, calls2: 546},
+  ];
+
+
+  // Define scales
+
+  var xScale = d3.scaleBand()
+      .domain(data.map(function(d) {return d.area; }))
+      .rangeRound([margin.left, width - margin.right])
+      .padding(0.3);
+
+  var xScale1 = d3.scaleBand()
+      .domain(['calls', 'calls2'])
+      .range([0, xScale.bandwidth()])
+
+  var yScale = d3.scaleLinear()
+      .domain([0, d3.max(data, function(d){
+        return d.calls > d.calls2 ? d.calls : d.calls2;
+      })])
+      .range([height - margin.bottom, margin.top]);
+
+  // Draw Axes
+
+  var xAxis = svg.append("g")
+      .call(d3.axisBottom(xScale))
+      .attr("transform", `translate(0, ${height - margin.bottom})`)
+
+  var yAxis = svg.append("g")
+      .call(d3.axisLeft(yScale))
+      .attr("transform", `translate(${margin.left}, 0)`);
+
+
+  // Draw data
+  var area = svg.selectAll(".area")
+      .data(data)
+      .enter().append('g')
+      .attr("class", "area")
+      .attr("transform", d => `translate(${xScale(d.area)}, 0)`);
+
+  // Chart 1
+
+  var chart1 = area.selectAll(".bar.calls")
+      .data(d => [d])
+      .enter()
+      .append("rect")
+      .attr("class", "bar calls")
+      .attr("x", function(d) {return xScale1('calls'); })
+      .attr("y", height - margin.bottom)
+      .attr("width", xScale1.bandwidth())
+      .attr("height", 0)
+      .style("fill", "#00ccff");
+
+  // Chart 2
+
+  var chart2 = area.selectAll(".bar.calls2")
+      .data(d => [d])
+      .enter()
+      .append("rect")
+      .attr("class", "bar calls2")
+      .attr("x", function(d) {return xScale1('calls2'); })
+      .attr("y", height - margin.bottom)
+      .attr("width", xScale1.bandwidth())
+      .attr("height", 0)
+      .style("fill", "#ffbb33");
+
+  chart1.transition()
+    .attr("height", function(d) {return height - margin.bottom - yScale(d.calls);})
+    .attr("y", function(d) {return yScale(d.calls); })
+    .delay(function(d,i) {
+      return i * 150;
+    });
+
+  chart2.transition()
+    .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
+    .attr("y", function(d) {return yScale(d.calls2); })
+    .delay(1000)
+
+  </script>
