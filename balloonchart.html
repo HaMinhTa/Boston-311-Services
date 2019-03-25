@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+
+    #value {
+    font-size: 70px;
+    position: relative;
+    top: 350px;
+    left: 200px;
+    }
+
+    h2 {
+      font-family: Helvetica;
+      color: steelblue;
+    }
+
+    .tooltip {
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      font-family: Georgia;
+    }
+
+    #charttitle {
+    font-size: 40px;
+    position: relative;
+    top: 480px;
+    left: 150px;
+    text-anchor: middle;
+    }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div>
+      <h2> Code Enforcement Calls Increase from 2012 to 2018 <h2>
+    </div>
+
+    <div id = "charttitle">
+    Code Enforcement
+    </div>
+
+    <div id="value">0</div>
+
+    <script>
+    var margin = {top: 20, right: 20, bottom: 50, left: 100};
+        width = 1000 - margin.right - margin.left;
+        height = 800 - margin.top - margin.bottom;
+
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    var circle = svg.append("circle")
+      .attr("cx", 400)
+      .attr("cy", 500)
+      .attr("r", 10)
+      .attr("fill","pink")
+      .attr("stroke-width", 1)
+      .on("mouseover", function(d,i) {
+        d3.select(this).attr("fill", "#e6f2ff")
+        tooltip.transition().duration(100)
+        tooltip.html("Number of Calls in 2018")
+        .style("left", d3.event.pageX - 50 + "px")
+        .style("top", d3.event.pageY - 50 + "px")
+        .style("opacity", 1)
+        .style("padding", "12px 14px");
+      })
+      .on("mouseout", function() {
+        d3.select(this).attr("fill", "#8dd4dc")
+        tooltip.html("")
+        .style("padding", "0");
+      });
+
+    var circle2 = svg.append("circle")
+      .attr("cx", 400)
+      .attr("cy", 500)
+      .attr("r", 15)
+      .attr("fill","#8dd4dc")
+      .attr("stroke-width", 1)
+      .attr("stroke", "grey")
+      .on("mouseover", function(d,i) {
+        d3.select(this).attr("fill", "#e6f2ff")
+        tooltip.transition().duration(100)
+        tooltip.html("Number of Calls in 2012")
+        .style("left", d3.event.pageX - 50 + "px")
+        .style("top", d3.event.pageY - 50 + "px")
+        .style("opacity", 1)
+        .style("padding", "6px 8px");
+      })
+      .on("mouseout", function() {
+        d3.select(this).attr("fill", "#8dd4dc")
+        tooltip.html("")
+        .style("padding", "0");
+      });
+
+    circle
+    	.transition()
+    	.duration(3000)
+      .delay(50)
+    	.attr("cx",200)
+    	.attr("cy",300)
+    	.style("fill","orange")
+    	.attr("r",300);
+
+    function animateValue(id, end) {
+    var current = 0;
+    var increment = 25;
+    var stepTime = 1;
+    var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = current;
+        if (current === 14900) {
+          increment = 1;
+        }
+        if (current >= end) {
+            clearInterval(timer);
+            }
+        }, stepTime);
+      }
+
+    var number = svg.append("text").text("16")
+      .attr("x", 400)
+      .attr("y", 500)
+      .attr("text-anchor", "middle")
+      .attr("fill", "black")
+      .attr("font-weight", "bold");
+
+    animateValue("value", 14983);
+
+    var tooltip = d3.select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("background", "yellow");
+    </script>
+
+  </body>
