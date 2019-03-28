@@ -41,7 +41,7 @@ var node_data = [
 ];
 
 function getRadius(d) {
-  return d["number"] / 500;
+  return d["number"] / 400;
 }
 
 function translateCircle(d) {
@@ -70,6 +70,7 @@ var node = svg.append("g")
               .on("mouseover", function(d,i) {
                 d3.select(this).attr("fill","grey")
                 tooltip.transition().duration(100)
+                // there is a problem here with the tooltip
                 tooltip.html(`<b>Reason</b>: ${d.reason}.<br> <b>Number of Calls</b>: ${d.number}`)
                 .style("left", d3.event.pageX - 50 + "px")
                 .style("top", d3.event.pageY - 50 + "px")
