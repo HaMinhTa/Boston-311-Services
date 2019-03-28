@@ -122,16 +122,16 @@
       .style("fill", "#ffbb33");
 
   chart1.transition()
-    .delay(1000)
+    .delay(500)
     .attr("height", function(d) {return height - margin.bottom - yScale(d.calls);})
     .attr("y", function(d) {return yScale(d.calls); })
-    .delay(function(d,i) {
-      return i * 150;
-    });
+    // .delay(function(d,i) {
+    //   return i * 150;
+    // });
 
   chart2.transition()
     .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
     .attr("y", function(d) {return yScale(d.calls2); })
-    .delay(1000)
+    .delay(2000)
 
   </script>
