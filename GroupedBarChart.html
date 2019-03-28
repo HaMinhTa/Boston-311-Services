@@ -122,6 +122,7 @@
       .style("fill", "#ffbb33");
 
   chart1.transition()
+    .delay(1000)
     .attr("height", function(d) {return height - margin.bottom - yScale(d.calls);})
     .attr("y", function(d) {return yScale(d.calls); })
     .delay(function(d,i) {
