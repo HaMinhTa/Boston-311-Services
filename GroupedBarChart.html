@@ -94,11 +94,14 @@
         .style("text-anchor", "end")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
-        .attr("transform", "rotate(-65)");
+        .attr("transform", "rotate(-65)")
+        .attr("font-size", "12px");
 
   var yAxis = svg.append("g")
       .call(d3.axisLeft(yScale))
-      .attr("transform", `translate(${margin.left}, 0)`);
+      .attr("transform", `translate(${margin.left}, 0)`)
+      .selectAll("text")
+      .attr("font-size", "12px");
 
 // Draw Labels
 
@@ -131,7 +134,8 @@
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute")
-    .style("background", "#e6faff");
+    .style("background", "#ccffe6")
+    .style("border-radius", "6px");
 
   // Chart 1
 
@@ -148,10 +152,11 @@
       .on("mouseover", function(d,i) {
         d3.select(this).attr("fill", "#D3D3D3");
         tooltip.transition().duration(100)
-        tooltip.html(`Year: 2012 <br> ${d.calls} calls `)
-        .style("left", d3.event.pageX - 50 + "px")
-        .style("top", d3.event.pageY - 50 + "px")
+        tooltip.html(`<b>Year:</b> 2012 <br> <b>Call per capita:</b> ${d.calls}`)
+        .style("left", d3.event.pageX + 10 + "px")
+        .style("top", d3.event.pageY + 10 + "px")
         .style("opacity", 1)
+        .style("font-size", "18px")
         .style("padding", "5px 8px");
       })
       .on("mouseout", function() {
@@ -175,10 +180,11 @@
       .on("mouseover", function(d,i) {
         d3.select(this).attr("fill", "#D3D3D3");
         tooltip.transition().duration(100)
-        tooltip.html(`Year: 2018 <br> ${d.calls2} calls `)
-        .style("left", d3.event.pageX - 50 + "px")
-        .style("top", d3.event.pageY - 50 + "px")
+        tooltip.html(`<b>Year:</b> 2018 <br> <b>Call per capita:</b> ${d.calls2}`)
+        .style("left", d3.event.pageX + 20 + "px")
+        .style("top", d3.event.pageY + 20 + "px")
         .style("opacity", 1)
+        .style("font-size", "18px")
         .style("padding", "5px 8px");
       })
       .on("mouseout", function() {
