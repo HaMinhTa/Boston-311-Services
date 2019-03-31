@@ -47,24 +47,24 @@
   // Define data
 
   var data = [
-    {area: "Dorchester", calls: 17120, calls2: 17847},
-    {area: "Roxbury", calls: 10053, calls2: 12219},
-    {area: "Allston", calls: 9611, calls2: 10553},
-    {area: "West Roxbury", calls: 8039, calls2: 9867},
-    {area: "Jamaica Plain", calls: 7888, calls2: 8920},
-    {area: "East Boston", calls: 7622, calls2: 7599},
-    {area: "South Boston", calls: 7511, calls2: 7154},
-    {area: "Greater Mattapan", calls: 6675, calls2: 7084},
-    {area: "Hyde Park", calls: 6474, calls2: 5906},
-    {area: "Roslindale", calls: 6218, calls2: 5171},
-    {area: "Downtown", calls: 5461, calls2: 5171},
-    {area: "Back Bay", calls: 4599, calls2: 4865},
-    {area: "South End", calls: 4200,calls2: 4763},
-    {area: "Charleston", calls: 3439, calls2: 4359},
-    {area: "Fenway", calls: 2431, calls2: 4350},
-    {area: "Beacon Hill", calls: 2105, calls2: 3509},
-    {area: "Mission Hill", calls: 2092, calls2: 2583},
-    {area: "Brighton", calls: 362, calls2: 546},
+    {area: "Allston", calls: 0.486, calls2: 0.534},
+    {area: "Back Bay", calls: 0.262, calls2: 0.277},
+    {area: "Beacon Hill", calls: 0.226, calls2: 0.377},
+    {area: "Brighton", calls: 0.008, calls2: 0.011},
+    {area: "Charlestown", calls: 0.190, calls2: 0.241},
+    {area: "Dorchester", calls: 0.138, calls2: 0.143},
+    {area: "Downtown", calls: 0.323, calls2: 0.306},
+    {area: "East Boston", calls: 0.169, calls2: 0.186},
+    {area: "Fenway", calls: 0.075, calls2: 0.135},
+    {area: "Hyde Park", calls: 0.182, calls2: 0.199},
+    {area: "Jamaica Plain", calls: 0.201, calls2: 0.227},
+    {area: "Mattapan", calls: 0.275, calls2: 0.295},
+    {area: "Mission Hill", calls: 0.125, calls2: 0.155},
+    {area: "Roslindale", calls: 0.217, calls2: 0.206},
+    {area: "Roxbury", calls: 0.196, calls2: 0.238},
+    {area: "South Boston", calls: 0.211, calls2: 0.213},
+    {area: "South End", calls: 0.133,calls2: 0.151},
+    {area: "West Roxbury", calls: 0.245, calls2: 0.301},
   ];
 
 
@@ -116,7 +116,7 @@
     .attr("y", -20)
     .attr("x", -height/2)
     .attr("text-anchor", "middle")
-    .text("Number of Calls");
+    .text("Number of Calls per Capita");
 
   // Draw data
   var area = svg.selectAll(".area")
