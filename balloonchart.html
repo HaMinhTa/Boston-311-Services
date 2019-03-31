@@ -8,7 +8,7 @@
     font-size: 70px;
     position: relative;
     top: 350px;
-    left: 200px;
+    left: 550px;
     }
 
     h2 {
@@ -23,11 +23,9 @@
       font-family: Georgia;
     }
 
-    #charttitle {
+    .charttitle {
     font-size: 40px;
     position: relative;
-    top: 480px;
-    left: 150px;
     text-anchor: middle;
     }
 
@@ -39,10 +37,6 @@
 
     <div>
       <h2> Code Enforcement Calls Increase from 2012 to 2018 <h2>
-    </div>
-
-    <div id = "charttitle">
-    Code Enforcement
     </div>
 
     <div id="value">0</div>
@@ -60,8 +54,8 @@
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
     var circle = svg.append("circle")
-      .attr("cx", 400)
-      .attr("cy", 500)
+      .attr("cx", width/3)
+      .attr("cy", height -250)
       .attr("r", 10)
       .attr("fill","pink")
       .attr("stroke-width", 1)
@@ -81,8 +75,8 @@
       });
 
     var circle2 = svg.append("circle")
-      .attr("cx", 400)
-      .attr("cy", 500)
+      .attr("cx", width/3)
+      .attr("cy", height - 250)
       .attr("r", 15)
       .attr("fill","#8dd4dc")
       .attr("stroke-width", 1)
@@ -106,8 +100,8 @@
     	.transition()
     	.duration(3000)
       .delay(50)
-    	.attr("cx",200)
-    	.attr("cy",300)
+    	.attr("cx",550)
+    	.attr("cy",height/2)
     	.style("fill","orange")
     	.attr("r",300);
 
@@ -129,11 +123,21 @@
       }
 
     var number = svg.append("text").text("16")
-      .attr("x", 400)
-      .attr("y", 500)
+      .attr("x", width/3)
+      .attr("y", height-250)
       .attr("text-anchor", "middle")
       .attr("fill", "black")
       .attr("font-weight", "bold");
+    //
+    // var number2 = svg.append("#value")
+    //   .attr("x", 550)
+    //   .attr("y", height/2 + 100);
+
+    var text = svg.append("text").text("Code Enforcement")
+      .attr("x", 550)
+      .attr("y", height/2 + 50)
+      .attr("class", "charttitle");
+
 
     animateValue("value", 14983);
 
