@@ -7,14 +7,18 @@
     #value {
     font-size: 70px;
     position: relative;
-    top: 350px;
-    left: 550px;
+    top: 300px;
+    left: 650px;
     }
 
     h2 {
-      font-family: Helvetica;
-      color: steelblue;
+      font-size: 40px;
+      padding: 15px 0px;
+      font-weight: bold;
+      font-family: Helvetica, Arial, sans-serif;
+      color: white;
       text-align: center;
+      background-color: #94d4ca;
     }
 
     .tooltip {
@@ -25,10 +29,18 @@
     }
 
     .charttitle {
-    font-size: 40px;
-    position: relative;
-    text-anchor: middle;
+      font-family: Helvetica, serif;
+      font-size: 40px;
+      position: relative;
+      text-anchor: middle;
+      fill: white;
     }
+
+    svg {
+      display: block;
+      margin: auto;
+    }
+
 
 
     </style>
@@ -37,7 +49,7 @@
   <body>
 
     <div>
-      <h2> Code Enforcement Calls Increase from 2012 to 2018 <h2>
+      <h2> Code Enforcement Calls Increase from 2012 to 2018 </h2>
     </div>
 
     <div id="value">0</div>
@@ -45,7 +57,7 @@
     <script>
     var margin = {top: 20, right: 20, bottom: 50, left: 100};
         width = 1000 - margin.right - margin.left;
-        height = 700 - margin.top - margin.bottom;
+        height = 600 - margin.top - margin.bottom;
 
     var svg = d3.select("body")
         .append("svg")
@@ -55,8 +67,8 @@
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
     var circle = svg.append("circle")
-      .attr("cx", width/4)
-      .attr("cy", height-140)
+      .attr("cx", width/3)
+      .attr("cy", height-50)
       .attr("r", 30)
       .attr("fill","pink")
       .attr("stroke-width", 1)
@@ -76,8 +88,8 @@
       });
 
     var circle2 = svg.append("circle")
-      .attr("cx", width/4)
-      .attr("cy", height-140)
+      .attr("cx", width/3)
+      .attr("cy", height-50)
       .attr("r", 30)
       .attr("fill","#8dd4dc")
       .attr("stroke-width", 1)
@@ -104,11 +116,11 @@
       .attr("cx",width/2)
       .attr("cy",height/2+20)
       .style("fill","orange")
-      .attr("r",320);
+      .attr("r",280);
 
     function animateValue(id, end) {
     var current = 0;
-    var increment = 25;
+    var increment = 50;
     var stepTime = 1;
     var obj = document.getElementById(id);
     var timer = setInterval(function() {
@@ -125,7 +137,7 @@
 
     var number = svg.append("text").text("16")
       .attr("x", width/3)
-      .attr("y", height-250)
+      .attr("y", height-50)
       .attr("text-anchor", "middle")
       .attr("fill", "black")
       .attr("font-weight", "bold");
@@ -134,10 +146,11 @@
     //   .attr("x", 550)
     //   .attr("y", height/2 + 100);
 
-    var text = svg.append("text").text("Code Enforcement")
-      .attr("x", 550)
-      .attr("y", height/2 + 50)
-      .attr("class", "charttitle");
+    var text = svg.append("text").text("Code Enforcement Calls")
+      .attr("x", width/2)
+      .attr("y", height/2 + 60)
+      .attr("class", "charttitle")
+      .attr("fill", "white");
 
 
     animateValue("value", 14983);
