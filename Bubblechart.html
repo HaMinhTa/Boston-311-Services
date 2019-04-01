@@ -13,9 +13,20 @@
 }
 
 </style>
+<button id="btn">Click Here</button>
 <svg width="960" height="600"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
+
+btn = document.getElementById("btn");
+btn.onclick = function() {
+  console.log("Here");
+  simulation.force("center_force", d3.forceX().x(function(d) {
+    console.log("Here too");
+    if (d["year"] === 2012) { return 100; }
+    else                    { return 900; }
+  }));
+}
 
 var svg = d3.select("svg"),
  width = +svg.attr("width"),
