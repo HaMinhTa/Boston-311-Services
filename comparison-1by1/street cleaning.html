@@ -27,17 +27,10 @@ var svg = d3.select("svg"),
 
 var node_data = [
 
-  {"reason": "Sanitation", "number": 27208, "year": 2012},
-  {"reason": "Sanitation", "number": 15196, "year": 2018},
-
-  {"reason": "Highway Maintenance", "number": 23303, "year": 2012},
-  {"reason": "Highway Maintenance", "number": 15212, "year": 2018},
 
   {"reason": "Street Cleaning", "number": 9967, "year": 2012},
   {"reason": "Street Cleaning", "number": 18311, "year": 2018},
 
-  //{"reason": "Street Lights", "number": 10318, "year": 2012},
-  //{"reason": "Street Lights", "number": 5156, "year": 2018},
 
 
 ];
@@ -87,22 +80,7 @@ var node = svg.append("g")
                 })
                 tooltip.html("")
                 .style("padding", "0");
-              }).on("click", function() {
-                console.log("test");
-                simulation.force("forceX", d3.forceX().x(function(d) {
-                  if(d.reason === "Sanitation") {
-                    return 500;
-                  } else if(d.reason === "Street Cleaning") {
-                    return 100;
-                //  } else if(d.reason === "Street Lights") {
-                  //  return 400;
-                  } else if (d.reason === "Highway Maintenance") {
-                    return 900
-
-                  }
-                }).strength(1));
-                simulation.restart();
-              })
+              });
 
 function tickActions() {
     node.attr("transform", translateCircle);
