@@ -163,7 +163,21 @@ var node = svg.append("g")
                 })
                 tooltip.html("")
                 .style("padding", "0");
-              });
+              });on("click", function() {
+                console.log("test");
+                simulation.force("forceX", d3.forceX().x(function(d) {
+                  if(d.reason === "Sanitation") {
+                    return 10;
+                  } else {
+                    return 400;
+                //  } else if(d.reason === "Street Lights") {
+                  //  return 400;
+                //  } else if (d.reason === "Highway Maintenance") {
+                  //  return 500
+                  }
+                }).strength(1));
+                simulation.restart();
+              })
 
 function tickActions() {
     node.attr("transform", translateCircle);
