@@ -1,0 +1,117 @@
+
+/* Place your styles in this section */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+
+.background {
+    width: 40%;
+}
+
+header {
+  width: 100%;
+  height: 400px;
+  /*background-image: url('images/background.jpg');*/
+  background-size: cover;
+  background-position: center center;
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color: black;
+  font-weight: bold;
+  font-family: Libre Baskerville;
+  font-size: 60px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: red;
+}
+
+h4 {
+  text-align: left;
+}
+
+.intro {
+  width: 60%;
+  margin-left: 20%;
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+
+}
+
+.sticky-content {
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+}
+
+a:link, a:visited {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+.full-width {
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.sticky-container {
+  padding-left: 20px;
+  padding-right: 10px;
+  position: relative;
+  z-index: 100;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sticky-content {
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex: 1 0 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.sticky-graphic {
+  z-index: -100;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  height: 100vh;
+  flex: 1 0 50%;
+  text-align: center;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
