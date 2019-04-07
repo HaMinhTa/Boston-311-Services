@@ -7,7 +7,7 @@
       width = 800;
       height = 400;
  // Another sample change - making the comment longer
-  var svg = d3.select("body")
+  var svg = d3.select("#barchart")
       .append("svg")
       .attr("width", width + margin.right + margin.left)
       .attr("height", height + margin.top + margin.bottom)
@@ -151,8 +151,8 @@
         d3.select(this).attr("fill", "grey");
         tooltip.transition().duration(100)
         tooltip.html(`Year: 2018 <br> Call per capita: ${d.calls2}`)
-        .style("left", d3.event.pageX + 20 + "px")
-        .style("top", d3.event.pageY + 20 + "px")
+        .style("left", d3.event.pageX - 50 + "px")
+        .style("top", d3.event.pageY - 50 + "px")
         .style("opacity", 1)
         .style("font-size", "18px")
         .style("padding", "5px 8px");
@@ -165,14 +165,13 @@
 
 
   chart1.transition()
-    //.delay(500)
     .attr("height", function(d) {return height - margin.bottom - yScale(d.calls);})
     .attr("y", function(d) {return yScale(d.calls); })
      .delay(function(d,i) {
        return i * 150;
      });
 
-  //chart2.transition()
-    //.attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
-    //.attr("y", function(d) {return yScale(d.calls2); })
-    //.delay(2000)
+  chart2.transition()
+    .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
+    .attr("y", function(d) {return yScale(d.calls2); })
+    .delay(2000)

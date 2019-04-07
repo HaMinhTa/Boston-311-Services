@@ -3,22 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>Boston 311 Non-Emergency Services</title>
-  <link rel="stylesheet" href="311 style.css">
+  <link rel="stylesheet" href="style.css">
   <script src="lib/d3.v5.js"></script>
   <script src="lib/noframework.waypoints.js"></script>
 </head>
 <body>
-  <div class="background">
-    <img src="images/background.jpg" >
-  </div>
   <header>
-
-    <h1> &nbsp &nbsp &nbsp Got a Non-Urgent Problem Boston? <br> <img src="images/phonering.gif" width="60" height="60"> Call 311. </h1>
+    <h1> <br> <br> &nbsp Got a non-Urgent <br> &nbsp Problem Boston? <br> &nbsp &nbsp &nbsp &nbsp Call 311. </h1>
   </header>
 
 
   <article>
-    <section class="full-width">
+    <section class="full-width" style="background-color: white;">
       <div class = intro>
         <h4>By Yuan Tian, Mengjiao Yu, Josh Sullivan and Ha Ta.</h4>
         <p>In 2015, the city of Boston launched its <a href = "https://www.cityofboston.gov/311/">311 service</a>, previously the Mayor’s hotline, to make it easier for residents to report non-emergency issues and access city services.  “If you have a broken street lamp, missed trash pickup, graffiti on your building, a bigfoot sighting or anything else that concerns you, use the new system,” Boston Mayor Marty Walsh said in a video where he introduced Boston 311 services.</p>
@@ -28,12 +24,12 @@
 
 
     <div class="sticky-container">
-      <section class="sticky-content" id="trigger1">
-        <h2>Number of Calls by Neighborhoods</h2>
+      <section class="sticky-content">
+        <h2 id="trigger1">Number of Calls by Neighborhoods</h2>
 
-        <p>Since its opening, residents in Boston have increasingly taken advantage of the 311 service.</p>
+        <p >Since its opening, residents in Boston have increasingly taken advantage of the 311 service.</p>
         <p>From 2012 to 2018, the use of 311 non-emergency calls is increased by 10 percent. That is likely because more constituents get knowledge of and use 311 non-emergency calls than before.</p>
-        <p>However, some neighborhoods report more incidents to 311 than others (then the map appears)
+        <p id="trigger2">However, some neighborhoods report more incidents to 311 than others (then the map appears)
         Overall, the majority of the calls come from the eastern neighborhoods, such as Dorchester, South Boston, and Roxbury. Both in 2012 and 2018, the largest number of calls come from Dorchester, which is also increased by 4.2 percent over that time.</p>
         <p>Although Dorchester (maybe make the Dorchester area blink and when the mouse hover on it, there is a tooltip with the number of calls) is where the most calls came from both in seven consecutive years, the Fenway area saw the biggest increase in calls during the same time. (maybe emphasize Fenway on the map?)</p>
         <p>However, Dorchester is not the community that saw calls increased the most. The Fenway area increased by nearly 80 percent from 2012 to 2018. The numbers of calls in Brighton are the lowest both for the two years. In 2012, Dorchester had nearly 60 times as many calls as Brighton.</p>
@@ -42,7 +38,7 @@
       </div>
 
       <div class="sticky-container">
-        <section class="sticky-content" id="trigger2">
+        <section class="sticky-content" id="trigger3">
         <p>There is a huge difference between the use of 311 non-emergency calls in the most popular neighborhood Dorchester and the most underused area Chestnut Hill.</p>
         <p>Another interesting thing is that there are 23 neighborhoods in the City of Boston, but there are only 18 neighborhoods has recorded. There are no records for North End, West End, Bay Village, and Chinatown, and Mid Dorchester.</p>
       </section>
@@ -100,7 +96,7 @@
   </article>
     <script src="js/barchart.js"></script>
     <script src="js/linechart.js"></script>
-    <script src="js/bubblechart.js"></script>
+    <!-- <script src="js/bubblechart.js"></script> -->
     <script src="js/balloonchart.js"></script>
 
 
