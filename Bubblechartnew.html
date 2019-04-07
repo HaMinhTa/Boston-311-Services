@@ -111,7 +111,7 @@ const forceSplitByCategoryX = d3.forceX(d => {
   switch (d["reason"]) {
     case "Sanitation":
       return grid[0].x + offset;
-    case "Highway Maintenance":
+    case "Graffiti":
       return grid[1].x + offset;
     case "Street Lights":
       return grid[2].x + offset;
@@ -125,7 +125,7 @@ const forceSplitByCategoryX = d3.forceX(d => {
       return grid[6].x + offset;
     case "Recycling":
       return grid[7].x + offset;
-    case "Graffiti":
+    case "Highway Maintenance":
       return grid[8].x + offset;
   }
 }).strength(0.9);
@@ -133,7 +133,7 @@ const forceSplitByCategoryY = d3.forceY(d => {
   switch (d["reason"]) {
     case "Sanitation":
       return grid[0].y;
-    case "Highway Maintenance":
+    case "Graffiti":
       return grid[1].y;
     case "Street Lights":
       return grid[2].y;
@@ -147,7 +147,7 @@ const forceSplitByCategoryY = d3.forceY(d => {
       return grid[6].y;
     case "Recycling":
       return grid[7].y;
-    case "Graffiti":
+    case "Highway Maintenance":
       return grid[8].y;
   }
 }).strength(0.9);
