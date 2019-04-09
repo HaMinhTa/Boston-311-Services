@@ -94,14 +94,9 @@ var area = svg.selectAll(".area")
     .attr("class", "area")
     .attr("transform", d => `translate(${xScale(d.area)}, 0)`);
 
-// Draw tooltip
+// Draw tooltip_bar
 
-var tooltip = d3.select("body")
-  .append("div")
-  .attr("class", "tooltip")
-  .style("position", "absolute")
-  .style("background", "#ccffe6")
-  .style("border-radius", "6px");
+
 
 // Chart 1
 
@@ -117,8 +112,8 @@ var chart1 = area.selectAll(".bar.calls")
     .attr("fill", "#ffffff")
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill", "#D3D3D3");
-      tooltip.transition().duration(100)
-      tooltip.html(`<b>Year:</b> 2012 <br> <b>Call per capita:</b> ${d.calls}`)
+      tooltip_bar.transition().duration(100)
+      tooltip_bar.html(`<b>Year:</b> 2012 <br> <b>Call per capita:</b> ${d.calls}`)
       .style("left", d3.event.pageX + 10 + "px")
       .style("top", d3.event.pageY + 10 + "px")
       .style("opacity", 1)
@@ -127,7 +122,7 @@ var chart1 = area.selectAll(".bar.calls")
     })
     .on("mouseout", function() {
       d3.select(this).attr("fill", "#00ccff")
-      tooltip.html("")
+      tooltip_bar.html("")
       .style("padding", "0");
     });
 
@@ -145,8 +140,8 @@ var chart2 = area.selectAll(".bar.calls2")
     .attr("fill", "#ffffff")
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill", "#D3D3D3");
-      tooltip.transition().duration(100)
-      tooltip.html(`<b>Year:</b> 2018 <br> <b>Call per capita:</b> ${d.calls2}`)
+      tooltip_bar.transition().duration(100)
+      tooltip_bar.html(`<b>Year:</b> 2018 <br> <b>Call per capita:</b> ${d.calls2}`)
       .style("left", d3.event.pageX + 20 + "px")
       .style("top", d3.event.pageY + 20 + "px")
       .style("opacity", 1)
@@ -155,7 +150,7 @@ var chart2 = area.selectAll(".bar.calls2")
     })
     .on("mouseout", function() {
       d3.select(this).attr("fill", "#ffbb33")
-      tooltip.html("")
+      tooltip_bar.html("")
       .style("padding", "0");
     });;
 
@@ -170,3 +165,10 @@ chart2.transition()
   .duration(1000)
   .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
   .attr("y", function(d) {return yScale(d.calls2); });
+
+  var tooltip_bar = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("position", "absolute")
+    .style("background", "#ccffe6")
+    .style("border-radius", "6px");

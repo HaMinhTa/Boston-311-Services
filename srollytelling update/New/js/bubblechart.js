@@ -2,9 +2,12 @@ const LIGHT_BLUE = "#b3f0ff";
 const BLUE = "#00ccff";
 const ORANGE ="#ffbb33";
 
-var svg = d3.select("#bubblechart"),
- width = +svg.attr("width"),
- height = +svg.attr("height");
+var width = 500,
+height = 500;
+
+var svg = d3.select("#bubblechart").append("svg")
+  .attr("width",width)
+  .attr("height",height);
 
 var node_data = [
   {"reason": "Sanitation", "number": 27208, "year": 2012},
@@ -187,7 +190,7 @@ var tooltip = d3.select("body")
   simulation.force('x', forceJoin)
             .force('y', forceY)
             .alphaTarget(0.1)
-            .restart()''
+            .restart();
 // });
 
 // d3.select("#btnCategory").on('click', function() {
