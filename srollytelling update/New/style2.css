@@ -1,0 +1,140 @@
+
+/* Place your styles in this section */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Cardo');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+
+
+header {
+  background-image: url("images/background1.jpg");
+  background-size: cover;
+  height: 880px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  color:  white;
+  font-weight: bold;
+  font-family: Libre Baskerville;
+  font-size: 72px;
+  line-height: 1.5;
+  float: left;
+
+}
+
+section {
+  background-color: /*#E0E0E0*/ white;
+  /*opacity: 0.8;*/
+}
+
+h2 {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: #FDB717;
+}
+
+h4 {
+  text-align: left;
+}
+
+.intro {
+  width: 60%;
+  margin-left: 20%;
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+
+}
+
+.sticky-content {
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+}
+
+a:link, a:visited {
+  color: #00ccff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 0.5px;
+}
+
+.button {
+  font-size: 22px;
+  padding: 10px 10px;
+  float: left;
+  display: block;
+  margin: auto;
+}
+
+
+
+/* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+}
+
+.full-width {
+  width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.sticky-container {
+  padding-left: 20px;
+  padding-right: 10px;
+  position: relative;
+  z-index: 100;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sticky-content {
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex: 1 0 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.sticky-graphic {
+  z-index: -100;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  height: 100vh;
+  flex: 1 0 50%;
+  text-align: center;
+  box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
