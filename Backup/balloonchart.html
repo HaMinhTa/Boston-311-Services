@@ -71,7 +71,6 @@
       .attr("cy", height-50)
       .attr("r", 30)
       .attr("fill","pink")
-      .attr("stroke-width", 1)
       .on("mouseover", function(d,i) {
         d3.select(this).attr("fill", "#e6f2ff")
         tooltip.transition().duration(100)
@@ -92,8 +91,6 @@
       .attr("cy", height-50)
       .attr("r", 30)
       .attr("fill","#8dd4dc")
-      .attr("stroke-width", 1)
-      .attr("stroke", "grey")
       .on("mouseover", function(d,i) {
         d3.select(this).attr("fill", "#e6f2ff")
         tooltip.transition().duration(100)
