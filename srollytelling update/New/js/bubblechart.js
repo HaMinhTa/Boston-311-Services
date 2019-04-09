@@ -3,8 +3,8 @@ const LIGHT_BLUE = "#b3f0ff";
 const BLUE = "#00ccff";
 const ORANGE ="#ffbb33";
 
-var width = 900,
-height = 800;
+var width = 800,
+height = 700;
 
 var svg = d3.select("#bubblechart").append("svg")
   .attr("width",width)
