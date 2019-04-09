@@ -112,8 +112,8 @@ var chart1 = area.selectAll(".bar.calls")
     .attr("fill", "#ffffff")
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill", "#D3D3D3");
-      tooltip_bar.transition().duration(100)
-      tooltip_bar.html(`<b>Year:</b> 2012 <br> <b>Call per capita:</b> ${d.calls}`)
+      tooltip.transition().duration(100)
+      tooltip.html(`Year: <b>2012</b> <br> Call per capita: <b>${d.calls}</b>`)
       .style("left", d3.event.pageX + 10 + "px")
       .style("top", d3.event.pageY + 10 + "px")
       .style("opacity", 1)
@@ -122,7 +122,7 @@ var chart1 = area.selectAll(".bar.calls")
     })
     .on("mouseout", function() {
       d3.select(this).attr("fill", "#00ccff")
-      tooltip_bar.html("")
+      tooltip.html("")
       .style("padding", "0");
     });
 
@@ -140,8 +140,8 @@ var chart2 = area.selectAll(".bar.calls2")
     .attr("fill", "#ffffff")
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill", "#D3D3D3");
-      tooltip_bar.transition().duration(100)
-      tooltip_bar.html(`<b>Year:</b> 2018 <br> <b>Call per capita:</b> ${d.calls2}`)
+      tooltip.transition().duration(100)
+      tooltip.html(`Year: <b>2018</b> <br> Call per capita: <b>${d.calls2}</b>`)
       .style("left", d3.event.pageX + 20 + "px")
       .style("top", d3.event.pageY + 20 + "px")
       .style("opacity", 1)
@@ -150,7 +150,7 @@ var chart2 = area.selectAll(".bar.calls2")
     })
     .on("mouseout", function() {
       d3.select(this).attr("fill", "#ffbb33")
-      tooltip_bar.html("")
+      tooltip.html("")
       .style("padding", "0");
     });;
 
@@ -166,10 +166,10 @@ chart2.transition()
   .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
   .attr("y", function(d) {return yScale(d.calls2); });
 
-// Draw tooltip_bar
-  var tooltip_bar = d3.select("body")
+// Draw tooltip
+  var tooltip = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute")
-    .style("background", "yellow")
+    .style("background", "#ccf5ff")
     .style("border-radius", "6px");

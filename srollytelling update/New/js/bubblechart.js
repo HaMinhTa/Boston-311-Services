@@ -3,6 +3,8 @@ const LIGHT_BLUE = "#b3f0ff";
 const BLUE = "#00ccff";
 const ORANGE ="#ffbb33";
 
+// var width = document.querySelector("#bubblechart").clientWidth + 500,
+// height = 500;
 var width = 800,
 height = 700;
 
@@ -153,8 +155,8 @@ var node = svg.append("g")
               })
               .on("mouseover", function(d,i) {
                 d3.select(this).attr("fill", "#D3D3D3")
-                tooltip_bubble.transition().duration(100)
-                tooltip_bubble.html(`Reason: <b>${d.reason}</b> <br>Number of Calls: <b>${d.number}</b>`)
+                tooltip.transition().duration(100)
+                tooltip.html(`Reason: <b>${d.reason}</b> <br>Number of Calls: <b>${d.number}</b>`)
                 .style("left", d3.event.pageX - 80 + "px")
                 .style("top", d3.event.pageY - 80 + "px")
                 .style("opacity", 1)
@@ -166,7 +168,7 @@ var node = svg.append("g")
                   if (d["year"] === 2012) { return BLUE; }
                   else                    { return ORANGE; }
                 })
-                tooltip_bubble.html("")
+                tooltip.html("")
                 .style("padding", "0");
               });
 
@@ -174,11 +176,11 @@ function tickActions() {
     node.attr("transform", translateCircle);
   }
 
-var tooltip_bubble = d3.select("body")
-  .append("div")
-  .attr("class", "tooltip")
-  .style("position", "absolute")
-  .style("background", "yellow");
+// var tooltip = d3.select("body")
+//   .append("div")
+//   .attr("class", "tooltip")
+//   .style("position", "absolute")
+//   .style("background", "yellow");
 
 // d3.select("#btnYear").on('click', function() {
   simulation.force('x', forceSplit)

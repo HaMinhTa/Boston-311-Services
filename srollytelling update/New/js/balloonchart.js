@@ -17,8 +17,8 @@ var circle = svg.append("circle")
   .attr("stroke-width", 1)
   .on("mouseover", function(d,i) {
     d3.select(this).attr("fill", "grey")
-    tooltip_balloon.transition().duration(100)
-    tooltip_balloon.html("Number of Calls in 2018")
+    tooltip.transition().duration(100)
+    tooltip.html("2018: 14983 calls")
     .style("left", d3.event.pageX - 50 + "px")
     .style("top", d3.event.pageY - 50 + "px")
     .style("opacity", 1)
@@ -26,7 +26,7 @@ var circle = svg.append("circle")
   })
   .on("mouseout", function() {
     d3.select(this).attr("fill", "#8dd4dc")
-    tooltip_balloon.html("")
+    tooltip.html("")
     .style("padding", "0");
   });
 
@@ -37,8 +37,8 @@ var circle2 = svg.append("circle")
   .attr("fill","#00ccff")
   .on("mouseover", function(d,i) {
     d3.select(this).attr("fill", "#D3D3D3")
-    tooltip_balloon.transition().duration(100)
-    tooltip_balloon.html("Number of Calls in 2012")
+    tooltip.transition().duration(100)
+    tooltip.html("2012: 16 calls")
     .style("left", d3.event.pageX - 50 + "px")
     .style("top", d3.event.pageY - 50 + "px")
     .style("opacity", 1)
@@ -46,7 +46,7 @@ var circle2 = svg.append("circle")
   })
   .on("mouseout", function() {
     d3.select(this).attr("fill", "#00ccff")
-    tooltip_balloon.html("")
+    tooltip.html("")
     .style("padding", "0");
   });
 
@@ -76,29 +76,31 @@ var timer = setInterval(function() {
     }, stepTime);
   }
 
-var number = svg.append("text").text("16")
-  .attr("x", width/3)
-  .attr("y", height-50)
-  .attr("text-anchor", "middle")
-  .attr("fill", "black")
-  .attr("font-weight", "bold");
+// var number = svg.append("text").text("")
+//   .attr("x", width/3)
+//   .attr("y", height-50)
+//   .attr("text-anchor", "middle")
+//   .attr("fill", "black")
+//   .attr("font-weight", "bold");
 //
 // var number2 = svg.append("#value")
 //   .attr("x", 550)
 //   .attr("y", height/2 + 100);
 
-var text = svg.append("text").text("Code Enforcement Calls")
+var text = svg.append("text").text("CODE ENFORCEMENT CALLS")
   .attr("x", width/3)
   .attr("y", height/2 + 30)
   .attr("class", "charttitle")
   .attr("fill", "white")
-  .attr("font-size", "30px");
+  .attr("font-size", "20px")
+  .attr("font-family", "Helvetica")
+  .attr("font-weight");
 
 
-animateValue("value", 14983);
+// animateValue("value", 14983);
 
-var tooltip_balloon = d3.select("body")
-  .append("div")
-  .attr("class", "tooltip")
-  .style("position", "absolute")
-  .style("background", "yellow");
+// var  = d3.select("body")
+//   .append("div")
+//   .attr("class", "tooltip")
+//   .style("position", "absolute")
+//   .style("background", "yellow");
