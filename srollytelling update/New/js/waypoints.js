@@ -71,3 +71,38 @@ var WAYPOINT2 = new Waypoint({
     }
   }
 });
+
+var WAYPOINT = new Waypoint({
+  element: document.querySelector("#trigger4"),
+  handler: function(direction) {
+    if(direction === "down") {
+    d3.selectAll(".bubble")
+
+    } else if(direction === "up") {
+    }
+  }
+});
+
+
+
+//balloon chart
+var waypoint3 = new Waypoint({
+  element: document.querySelector("#trigger5"),
+  handler: function(direction) {
+    if(direction === "down") {
+
+      d3.select(".animateCircle")
+        .transition()
+        .duration(1000)
+        .attr("r",280)
+        .attr("fill","orange")
+        .attr("cx",width/2)
+        .attr("cy",height/2+20)
+
+    } else if(direction === "up") {
+
+      d3.select(".animateCircle")
+
+    }
+  }
+});
