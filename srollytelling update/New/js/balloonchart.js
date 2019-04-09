@@ -1,5 +1,5 @@
-var margin = {top: 20, right: 20, bottom: 50, left: 100};
-    width = 1000 - margin.right - margin.left;
+var margin = {top: 20, right: 20, bottom: 20, left: 20};
+    width = 800 - margin.right - margin.left;
     height = 600 - margin.top - margin.bottom;
 
 var svg = d3.select("#balloonchart")
@@ -13,10 +13,10 @@ var circle = svg.append("circle")
   .attr("cx", width/3)
   .attr("cy", height-50)
   .attr("r", 30)
-  .attr("fill","pink")
+  .attr("fill","#ffb84d")
   .attr("stroke-width", 1)
   .on("mouseover", function(d,i) {
-    d3.select(this).attr("fill", "#e6f2ff")
+    d3.select(this).attr("fill", "grey")
     tooltip_balloon.transition().duration(100)
     tooltip_balloon.html("Number of Calls in 2018")
     .style("left", d3.event.pageX - 50 + "px")
@@ -34,11 +34,9 @@ var circle2 = svg.append("circle")
   .attr("cx", width/3)
   .attr("cy", height-50)
   .attr("r", 30)
-  .attr("fill","#8dd4dc")
-  .attr("stroke-width", 1)
-  .attr("stroke", "grey")
+  .attr("fill","#00ccff")
   .on("mouseover", function(d,i) {
-    d3.select(this).attr("fill", "#e6f2ff")
+    d3.select(this).attr("fill", "#D3D3D3")
     tooltip_balloon.transition().duration(100)
     tooltip_balloon.html("Number of Calls in 2012")
     .style("left", d3.event.pageX - 50 + "px")
@@ -47,7 +45,7 @@ var circle2 = svg.append("circle")
     .style("padding", "6px 8px");
   })
   .on("mouseout", function() {
-    d3.select(this).attr("fill", "#8dd4dc")
+    d3.select(this).attr("fill", "#00ccff")
     tooltip_balloon.html("")
     .style("padding", "0");
   });
@@ -90,10 +88,11 @@ var number = svg.append("text").text("16")
 //   .attr("y", height/2 + 100);
 
 var text = svg.append("text").text("Code Enforcement Calls")
-  .attr("x", width/2)
-  .attr("y", height/2 + 60)
+  .attr("x", width/3)
+  .attr("y", height/2 + 30)
   .attr("class", "charttitle")
-  .attr("fill", "white");
+  .attr("fill", "white")
+  .attr("font-size", "30px");
 
 
 animateValue("value", 14983);

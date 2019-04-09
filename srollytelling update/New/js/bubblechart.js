@@ -152,7 +152,7 @@ var node = svg.append("g")
                 else                    { return ORANGE; }
               })
               .on("mouseover", function(d,i) {
-                d3.select(this).attr("fill", "grey")
+                d3.select(this).attr("fill", "#D3D3D3")
                 tooltip_bubble.transition().duration(100)
                 tooltip_bubble.html(`Reason: <b>${d.reason}</b> <br>Number of Calls: <b>${d.number}</b>`)
                 .style("left", d3.event.pageX - 80 + "px")
