@@ -63,8 +63,8 @@ var circle = svg.selectAll("circle")
     .attr("stroke-width",2)
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill","orange").attr("r",12)
-      tooltip.transition().duration(100)
-      tooltip.html(`${d.calls}`)
+      tooltip_line.transition().duration(100)
+      tooltip_line.html(`${d.calls}`)
       .style("left", d3.event.pageX - 50 + "px")
       .style("top", d3.event.pageY - 50 + "px")
       .style("opacity", 1)
@@ -73,7 +73,7 @@ var circle = svg.selectAll("circle")
     })
     .on("mouseout", function() {
       d3.select(this).attr("fill","#00ccff").attr("r",8)
-      tooltip.html("")
+      tooltip_line.html("")
       .style("padding", "0");
     });
 
@@ -92,8 +92,8 @@ var yLabel = svg.append("text")
   .attr("transform","rotate(-90)")
   .text("Number of calls");
 
-var tooltip = d3.select("body")
+var tooltip_line = d3.select("body")
   .append("div")
   .attr("class", "tooltip")
   .style("position", "absolute")
-  .style("background", "#b3f0ff");
+  .style("background", "yellow");

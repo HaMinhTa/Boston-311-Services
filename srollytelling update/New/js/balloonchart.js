@@ -17,8 +17,8 @@ var circle = svg.append("circle")
   .attr("stroke-width", 1)
   .on("mouseover", function(d,i) {
     d3.select(this).attr("fill", "#e6f2ff")
-    tooltip.transition().duration(100)
-    tooltip.html("Number of Calls in 2018")
+    tooltip_balloon.transition().duration(100)
+    tooltip_balloon.html("Number of Calls in 2018")
     .style("left", d3.event.pageX - 50 + "px")
     .style("top", d3.event.pageY - 50 + "px")
     .style("opacity", 1)
@@ -26,7 +26,7 @@ var circle = svg.append("circle")
   })
   .on("mouseout", function() {
     d3.select(this).attr("fill", "#8dd4dc")
-    tooltip.html("")
+    tooltip_balloon.html("")
     .style("padding", "0");
   });
 
@@ -39,8 +39,8 @@ var circle2 = svg.append("circle")
   .attr("stroke", "grey")
   .on("mouseover", function(d,i) {
     d3.select(this).attr("fill", "#e6f2ff")
-    tooltip.transition().duration(100)
-    tooltip.html("Number of Calls in 2012")
+    tooltip_balloon.transition().duration(100)
+    tooltip_balloon.html("Number of Calls in 2012")
     .style("left", d3.event.pageX - 50 + "px")
     .style("top", d3.event.pageY - 50 + "px")
     .style("opacity", 1)
@@ -48,7 +48,7 @@ var circle2 = svg.append("circle")
   })
   .on("mouseout", function() {
     d3.select(this).attr("fill", "#8dd4dc")
-    tooltip.html("")
+    tooltip_balloon.html("")
     .style("padding", "0");
   });
 
@@ -98,7 +98,7 @@ var text = svg.append("text").text("Code Enforcement Calls")
 
 animateValue("value", 14983);
 
-var tooltip = d3.select("body")
+var tooltip_balloon = d3.select("body")
   .append("div")
   .attr("class", "tooltip")
   .style("position", "absolute")

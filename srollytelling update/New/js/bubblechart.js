@@ -1,9 +1,10 @@
+
 const LIGHT_BLUE = "#b3f0ff";
 const BLUE = "#00ccff";
 const ORANGE ="#ffbb33";
 
-var width = 500,
-height = 500;
+var width = 900,
+height = 800;
 
 var svg = d3.select("#bubblechart").append("svg")
   .attr("width",width)
@@ -54,9 +55,9 @@ var node_data = [
 // const grid = createGrid(width, height, 2, 3);
 
 const grid = [
-  {x: width / 5,       y: height / 5      },
-  {x: width / 2,       y: height / 5      },
-  {x: (4 * width) / 5, y: height / 5      },
+  {x: width / 4,       y: height / 4      },
+  {x: width / 2,       y: height / 4      },
+  {x: (4 * width) / 5, y: height / 4      },
   {x: width / 5,       y: (2 * height) / 4},
   {x: width / 2,       y: (2 * height) / 4},
   {x: (4 * width) / 5, y: (2 * height) / 4},
@@ -152,8 +153,8 @@ var node = svg.append("g")
               })
               .on("mouseover", function(d,i) {
                 d3.select(this).attr("fill", "grey")
-                tooltip.transition().duration(100)
-                tooltip.html(`Reason: <b>${d.reason}</b> <br>Number of Calls: <b>${d.number}</b>`)
+                tooltip_bubble.transition().duration(100)
+                tooltip_bubble.html(`Reason: <b>${d.reason}</b> <br>Number of Calls: <b>${d.number}</b>`)
                 .style("left", d3.event.pageX - 80 + "px")
                 .style("top", d3.event.pageY - 80 + "px")
                 .style("opacity", 1)
@@ -165,7 +166,7 @@ var node = svg.append("g")
                   if (d["year"] === 2012) { return BLUE; }
                   else                    { return ORANGE; }
                 })
-                tooltip.html("")
+                tooltip_bubble.html("")
                 .style("padding", "0");
               });
 
@@ -173,11 +174,11 @@ function tickActions() {
     node.attr("transform", translateCircle);
   }
 
-var tooltip = d3.select("body")
+var tooltip_bubble = d3.select("body")
   .append("div")
   .attr("class", "tooltip")
   .style("position", "absolute")
-  .style("background", LIGHT_BLUE);
+  .style("background", "yellow");
 
 // d3.select("#btnYear").on('click', function() {
   simulation.force('x', forceSplit)

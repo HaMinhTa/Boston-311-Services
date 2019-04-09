@@ -94,7 +94,7 @@ var area = svg.selectAll(".area")
     .attr("class", "area")
     .attr("transform", d => `translate(${xScale(d.area)}, 0)`);
 
-// Draw tooltip_bar
+
 
 
 
@@ -166,9 +166,10 @@ chart2.transition()
   .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
   .attr("y", function(d) {return yScale(d.calls2); });
 
+// Draw tooltip_bar
   var tooltip_bar = d3.select("body")
     .append("div")
     .attr("class", "tooltip")
     .style("position", "absolute")
-    .style("background", "#ccffe6")
+    .style("background", "yellow")
     .style("border-radius", "6px");
