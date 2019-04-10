@@ -1,6 +1,6 @@
 var width = document.querySelector("#linechart").clientWidth +300;
-var height = 500;
-var margin = {top: 25, left: 100, right: 25, bottom: 75};
+var height = 600;
+var margin = {top: 200, left: 100, right: 25, bottom: 70};
 
 var svg = d3.select("#linechart")
   .append("svg")

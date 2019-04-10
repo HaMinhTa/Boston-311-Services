@@ -41,8 +41,9 @@ var WAYPOINT2 = new Waypoint({
   }
 });
 
-var WAYPOINT2 = new Waypoint({
+var WAYPOINT3 = new Waypoint({
   element: document.querySelector("#trigger3"),
+  offset: 100,
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".circle")
@@ -71,3 +72,16 @@ var WAYPOINT2 = new Waypoint({
     }
   }
 });
+//
+// var WAYPOINT3 = new Waypoint({
+//   element: document.querySelector("#trigger3"),
+//   handler: function(direction) {
+//     document.querySelector("#balloonchart")
+//     simulation.force('x', forceSplit)
+//               .force('y', forceY)
+//               .alphaTarget(0.3)
+//               .restart();
+//     } else if(direction === "up") {
+//     }
+//   }
+// });

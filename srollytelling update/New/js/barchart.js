@@ -1,6 +1,6 @@
 // Generate svg
 
-var margin = {top: 20, right: 20, bottom: 60, left: 50};
+var margin = {top: 60, right: 20, bottom: 60, left: 50};
     width = document.querySelector("#barchart").clientWidth + 300;
     height = 500;
 var svg = d3.select("#barchart")

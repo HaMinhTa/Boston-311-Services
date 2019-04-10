@@ -85,7 +85,6 @@ a:hover {
 }
 
 
-
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
 
 body, html {
@@ -142,4 +141,8 @@ body, html {
 
 .tooltip {
   z-index: 1000;
+}
+
+p {
+  height: 100vh;
 }
