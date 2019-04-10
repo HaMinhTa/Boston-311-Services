@@ -144,7 +144,7 @@ var simulation = d3.forceSimulation()
 
 var node = svg.append("g")
               .attr("class", "nodes")
-              .selectAll("circle")
+              .selectAll("bubble")
               .data(node_data)
               .enter()
               .append("circle")
@@ -183,22 +183,22 @@ function tickActions() {
 //   .style("background", "yellow");
 
 // d3.select("#btnYear").on('click', function() {
-  simulation.force('x', forceSplit)
-            .force('y', forceY)
-            .alphaTarget(0.3)
-            .restart();
+  // simulation.force('x', forceSplit)
+  //           .force('y', forceY)
+  //           .alphaTarget(0.3)
+  //           .restart();
 // });
 
 // d3.select("#btnAll").on('click', function() {
-  simulation.force('x', forceJoin)
-            .force('y', forceY)
-            .alphaTarget(0.1)
-            .restart();
+  // simulation.force('x', forceJoin)
+  //           .force('y', forceY)
+  //           .alphaTarget(0.1)
+  //           .restart();
 // });
 
 // d3.select("#btnCategory").on('click', function() {
-  simulation.force('x', forceSplitByCategoryX)
-            .force('y', forceSplitByCategoryY)
-            .alphaTarget(0.1)
-            .restart();
+  // simulation.force('x', forceSplitByCategoryX)
+  //           .force('y', forceSplitByCategoryY)
+  //           .alphaTarget(0.1)
+  //           .restart();
 // });

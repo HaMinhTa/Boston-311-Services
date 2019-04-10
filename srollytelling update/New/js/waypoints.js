@@ -24,6 +24,8 @@ var WAYPOINT = new Waypoint({
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".calls")
+    .transition()
+    .duration(200)
       .attr("fill", "#00ccff")
     } else if(direction === "up") {
     }
@@ -35,11 +37,14 @@ var WAYPOINT2 = new Waypoint({
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".calls2")
+    .transition()
+    .duration(500)
       .attr("fill", "#ffbb33")
     } else if(direction === "up") {
     }
   }
 });
+
 
 var WAYPOINT3 = new Waypoint({
   element: document.querySelector("#trigger3"),
@@ -85,8 +90,73 @@ var WAYPOINT4 = new Waypoint({
         .attr("cx",width/2)
         .attr("cy",height/2+20)
         .style("fill","orange")
-        .attr("r",280);
+        .attr("r",280)
     } else if(direction === "up") {
+
+    }
+  }
+});
+
+var WAYPOINT5 = new Waypoint({
+  element: document.querySelector("#trigger5a"),
+  offset: 100,
+  handler: function(direction) {
+    if(direction === "down") {
+      d3.selectAll(".bubble")
+      simulation.force('x', forceJoin)
+                .force('y', forceY)
+                .alphaTarget(0.1)
+                .restart()
+
+    } else if(direction === "up") {
+      d3.selectAll(".bubble")
+      simulation.force('x', forceJoin)
+                .force('y', forceY)
+                .alphaTarget(0.1)
+                .restart()
+    }
+  }
+});
+
+var WAYPOINT5 = new Waypoint({
+  element: document.querySelector("#trigger5b"),
+  offset: 100,
+  handler: function(direction) {
+    if(direction === "down") {
+      d3.selectAll(".bubble")
+      simulation.force('x', forceSplit)
+                .force('y', forceY)
+                .alphaTarget(0.3)
+                .restart()
+
+    } else if(direction === "up") {
+      d3.selectAll(".bubble")
+      simulation.force('x', forceSplit)
+                .force('y', forceY)
+                .alphaTarget(0.3)
+                .restart()
+    }
+  }
+});
+
+
+var WAYPOINT5 = new Waypoint({
+  element: document.querySelector("#trigger5c"),
+  offset: 100,
+  handler: function(direction) {
+    if(direction === "down") {
+      d3.selectAll(".bubble")
+      simulation.force('x', forceSplitByCategoryX)
+                .force('y', forceSplitByCategoryY)
+                .alphaTarget(0.1)
+                .restart()
+
+    } else if(direction === "up") {
+      d3.selectAll(".bubble")
+      simulation.force('x', forceSplitByCategoryX)
+                .force('y', forceSplitByCategoryY)
+                .alphaTarget(0.1)
+                .restart()
     }
   }
 });
