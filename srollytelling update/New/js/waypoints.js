@@ -72,3 +72,21 @@ var WAYPOINT3 = new Waypoint({
     }
   }
 });
+
+var WAYPOINT4 = new Waypoint({
+  element: document.querySelector("#trigger4"),
+  offset: 100,
+  handler: function(direction) {
+    if(direction === "down") {
+      circle
+        .transition()
+        .duration(2500)
+        .delay(20)
+        .attr("cx",width/2)
+        .attr("cy",height/2+20)
+        .style("fill","orange")
+        .attr("r",280);
+    } else if(direction === "up") {
+    }
+  }
+});
