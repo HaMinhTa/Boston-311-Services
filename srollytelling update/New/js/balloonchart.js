@@ -10,6 +10,7 @@ var svg = d3.select("#balloonchart")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 var circle = svg.append("circle")
+  .attr("class","animateCircle")
   .attr("cx", width/3)
   .attr("cy", height-50)
   .attr("r", 30)
@@ -50,14 +51,14 @@ var circle2 = svg.append("circle")
     .style("padding", "0");
   });
 
-circle
-  .transition()
-  .duration(2500)
-  .delay(20)
-  .attr("cx",width/2)
-  .attr("cy",height/2+20)
-  .style("fill","orange")
-  .attr("r",280);
+// circle
+//   .transition()
+//   .duration(2500)
+//   .delay(20)
+//   .attr("cx",width/2)
+//   .attr("cy",height/2+20)
+//   .style("fill","orange")
+//   .attr("r",280);
 
 function animateValue(id, end) {
 var current = 0;
