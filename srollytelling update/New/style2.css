@@ -87,12 +87,13 @@ a:hover {
   margin: auto;
 }
 
-#viz1554849290060 {
+#viz1555087946517 {
   padding-left: 60px;
 }
 
 .axisLabel {
-  color: white;
+  fill: white;
+  font-size: 18px;
 }
 
 .axis {
@@ -100,6 +101,10 @@ a:hover {
   font-size: 14px;
 }
 
+.legend {
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
+}
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
 
 body, html {

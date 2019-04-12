@@ -88,14 +88,20 @@ var timer = setInterval(function() {
 //   .attr("x", 550)
 //   .attr("y", height/2 + 100);
 
-var text = svg.append("text").text("CODE ENFORCEMENT CALLS")
-  .attr("x", width/3)
+var text = svg.append("text").text("CODE ENFORCEMENT CALLS 2018")
+  .attr("x", width/4)
   .attr("y", height/2 + 30)
-  .attr("class", "charttitle")
   .attr("fill", "white")
-  .attr("font-size", "20px")
+  .attr("font-size", "25px")
   .attr("font-family", "Helvetica")
   .attr("font-weight");
+
+var text2 = svg.append("text").text("2012")
+  .attr("x", width/3 - 20)
+  .attr("y", height-50)
+  .attr("font-size", "18px")
+  .attr("font-family", "Helvetica")
+  .attr("fill", "white");
 
 
 // animateValue("value", 14983);

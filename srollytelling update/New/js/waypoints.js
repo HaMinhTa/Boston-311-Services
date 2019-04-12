@@ -19,13 +19,12 @@ var WAYPOINT = new Waypoint({
 
 */
 
-var WAYPOINT = new Waypoint({
+var WAYPOINT0 = new Waypoint({
   element: document.querySelector("#trigger1"),
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".calls")
       .transition()
-    // .duration(200)
       .attr("fill", "#00ccff")
     } else if(direction === "up") {
     d3.selectAll(".calls")
@@ -36,11 +35,11 @@ var WAYPOINT = new Waypoint({
 
 var WAYPOINT1 = new Waypoint({
   element: document.querySelector("#trigger2"),
+  offset: 500,
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".calls2")
       .transition()
-    // .duration(500)
       .attr("fill", "#ffbb33")
     } else if(direction === "up") {
     d3.selectAll(".calls2")
@@ -108,7 +107,7 @@ var WAYPOINT3 = new Waypoint({
   }
 });
 
-var WAYPOINT3 = new Waypoint({
+var WAYPOINT4 = new Waypoint({
   element: document.querySelector("#trigger5b"),
   offset: 100,
   handler: function(direction) {
@@ -130,7 +129,7 @@ var WAYPOINT3 = new Waypoint({
 });
 
 
-var WAYPOINT4 = new Waypoint({
+var WAYPOINT5 = new Waypoint({
   element: document.querySelector("#trigger5c"),
   offset: 100,
   handler: function(direction) {
@@ -151,7 +150,7 @@ var WAYPOINT4 = new Waypoint({
   }
 });
 
-var WAYPOINT5 = new Waypoint({
+var WAYPOINT6 = new Waypoint({
   element: document.querySelector("#trigger4"),
   offset: 100,
   handler: function(direction) {

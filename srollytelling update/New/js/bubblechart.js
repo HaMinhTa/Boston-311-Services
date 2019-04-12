@@ -38,23 +38,6 @@ var node_data = [
   {"reason": "Graffiti", "number": 1779, "year": 2018}
 ];
 
-// function createGrid(width, height, rows, cols) {
-//   let grid = [];
-//   let padLeft = 200;
-//   let padTop = 100;
-//   let w = width - 200;
-//   let h = height - 200;
-//   for (let j = 0; j < cols; ++j) {
-//     for (let i =  0; i < rows; ++i) {
-//       let newX = ((j * w) / cols) + padLeft;
-//       let newY = ((i * h) / rows) + padTop;
-//       grid.push({x: newX, y: newY});
-//     }
-//   }
-//   return grid;
-// }
-//
-// const grid = createGrid(width, height, 2, 3);
 
 const grid = [
   {x: width / 4,       y: height / 4      },
@@ -171,6 +154,37 @@ var node = svg.append("g")
                 tooltip.html("")
                 .style("padding", "0");
               });
+
+var bluerect = svg.append("rect")
+                  .attr("class", "legend")
+                  .attr("x", 150)
+                  .attr("y", 40)
+                  .attr("width", 25)
+                  .attr("height", 25)
+                  .attr("fill", "#00ccff");
+
+var orangerect = svg.append("rect")
+                  .attr("class", "legend")
+                  .attr("x", 500)
+                  .attr("y", 40)
+                  .attr("width", 25)
+                  .attr("height", 25)
+                  .attr("fill", "#ffbb33");
+
+var year12 = svg.append("text").text("2012")
+                  .attr("x", 200)
+                  .attr("y", 62)
+                  .attr("fill", "#ffffff")
+                  .attr("class", "legend");
+
+
+var year18 = svg.append("text").text("2018")
+                  .attr("x", 550)
+                  .attr("y", 62)
+                  .attr("fill", "#ffffff")
+                  .attr("class", "legend");
+
+
 
 function tickActions() {
     node.attr("transform", translateCircle);

@@ -86,8 +86,8 @@ var xLabel = svg.append("text")
 
 var yLabel = svg.append("text")
   .attr("class","axisLabel")
-  .attr("y",20)
-  .attr("x", -height/2)
+  .attr("y", 20)
+  .attr("x", -height/2 -60)
   .attr("text-anchor","middle")
   .attr("transform","rotate(-90)")
   .text("Number of calls");

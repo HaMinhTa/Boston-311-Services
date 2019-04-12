@@ -165,6 +165,35 @@ chart2.transition()
   .attr("height", function(d) {return height - margin.bottom - yScale(d.calls2);})
   .attr("y", function(d) {return yScale(d.calls2); });
 
+var bluerect = svg.append("rect")
+                  .attr("x", 150)
+                  .attr("y", 40)
+                  .attr("width", 25)
+                  .attr("height", 25)
+                  .attr("fill", "#00ccff")
+                  .attr("class", "legend");
+
+var orangerect = svg.append("rect")
+                  .attr("x", 500)
+                  .attr("y", 40)
+                  .attr("width", 25)
+                  .attr("height", 25)
+                  .attr("fill", "#ffbb33")
+                  .attr("class", "legend");
+
+var year12 = svg.append("text").text("2012")
+                  .attr("x", 200)
+                  .attr("y", 62)
+                  .attr("fill", "#ffffff")
+                  .attr("class", "legend");
+
+
+var year18 = svg.append("text").text("2018")
+                  .attr("x", 550)
+                  .attr("y", 62)
+                  .attr("fill", "#ffffff")
+                  .attr("class", "legend");
+
 // Draw tooltip
   var tooltip = d3.select("body")
     .append("div")
