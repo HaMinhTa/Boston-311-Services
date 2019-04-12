@@ -6,10 +6,110 @@
   <link rel="stylesheet" href="style2.css">
   <script src="lib/d3.v5.js"></script>
   <script src="lib/noframework.waypoints.js"></script>
+  <style>
+  @media only screen and (max-width: 600px) {
+  /* For mobile: */
+  #cover{
+    width: 100%;
+  }
+  .centered{
+    font-size: 100%;
+  }
+  .intro {
+    width: 100%;
+    margin-left: 0%;
+    line-height: 1.8;
+    font-family: Georgia;
+    font-size: 16px;
+
+  }
+
+  .intrograph{
+    width: 100%;
+    height: 35vh;
+  }
+
+  .sticky-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    /* display: flex;
+    flex-direction: row; */
+  }
+
+  .sticky-content {
+    line-height: 1.8;
+    font-family: Georgia;
+    font-size: 16px;
+    position: relative;
+    /* display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+    box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box; */
+  }
+
+  .sticky-graphic {
+    width: 3vw;
+    z-index: -100;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    flex: 1 0 50%;
+    text-align: center;
+    box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+  }
+
+  section {
+    background-color: black;
+    color: white;
+    opacity: 1;
+  }
+  }
+
+
+@media only screen and (min-width: 600px){
+    .intrograph{
+      width: 100%;
+      height: 30vh;
+    }
+    .intro {
+      width: 90%;
+      margin-left: 5%;
+      line-height: 1.8;
+      font-family: Georgia;
+      font-size: 16px;
+    }
+  }
+ @media only screen and (min-width: 768px){
+  .intrograph{
+    width: 100%;
+    height: 20vh;
+  }
+}
+@media only screen and (min-width: 992px){
+  .intrograph{
+    width: 100%;
+    height: 17.5vh;
+  }
+}
+
+  </style>
 </head>
 <body>
   <header>
-    <h1> <br> <br> &nbsp Got a non-Urgent <br> &nbsp Problem Boston? <br> &nbsp Call 311. </h1>
+    <div class="container">
+      <img src=images/background1.jpg id="cover" width="100%">
+    <h1 class="centered"><br> <br> &nbsp Got a non-Urgent <br> &nbsp Problem Boston? <br> &nbsp Call 311. </h1>
+    </div>
   </header>
 
 
@@ -34,7 +134,7 @@
         Overall, the majority of the calls come from the eastern neighborhoods, such as Dorchester, South Boston, and Roxbury. Both in 2012 and 2018, the largest number of calls come from Dorchester, which is also increased by 4.2 percent over that time.</p>
 
       </section>
-      <div class="sticky-graphic" id="barchart"></div>
+      <div class="sticky-graphic" id="barchart" width="100%"></div>
       </div>
 
       <div class="sticky-container">
@@ -45,7 +145,7 @@
         <p id="trigger3">There is a huge difference between the use of 311 non-emergency calls in the most popular neighborhood Dorchester and the most underused area Chestnut Hill.</p>
         <p>Another interesting thing is that there are 23 neighborhoods in the City of Boston, but there are only 18 neighborhoods has recorded. There are no records for North End, West End, Bay Village, and Chinatown, and Mid Dorchester.</p>
       </section>
-      <div class="sticky-graphic" id="linechart"></div>
+      <div class="sticky-graphic" id="linechart" width="100%"></div>
       </div>
 
 
@@ -66,7 +166,7 @@
         <p>From 2012 to 2018, the sum of reasons for the call increased to 131,895, which is 11.6 percent. The most popular reason for the call in 2012  was “sanitation”, which constitutes 23 percent of the calls. In 2018, that dropped down to the fourth cited reason. The second popular reason in 2012 is “highway maintenance”, and that dropped down to the third most popular reason in 2018.</p>
       </section>
       <!-- <div class="sticky-content" id="bubblechartlabel"> <p>2012</p> <p>2018</p></div> -->
-      <div class="sticky-graphic" id="bubblechart"></div>
+      <div class="sticky-graphic" id="bubblechart" width="100%"></div>
 
       </div>
 
@@ -79,7 +179,7 @@
         <p>In 2018, there are 17 topics with over 1000 calls. Five of them are over 10 percent and 11 of them are under 4 percent. There are 29 reasons with less than 1000 calls and the sum of the calls for all these reasons is 4268, which is 3 percent.</p>
 
       </section>
-      <div class="sticky-graphic" id="balloonchart"></div>
+      <div class="sticky-graphic" id="balloonchart" width="100%"></div>
       </div>
 
 
@@ -94,7 +194,7 @@
         <p>One interesting outlier is the Fenway neighborhood. In 2011, that neighborhood did not contribute much to the overall number of 311 complaints - just 2,363 -  and comparatively only had about 11 percent of its requests solved later than the projected completion date. That made it on of the most efficient neighborhoods in the city, along with Hyde Park, which also was only overdue for just 11 percent of calls, and West Roxbury.</p>
       </section>
 
-      <div class="sticky-graphic" id='viz1555087946517' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='311OverdueCalls&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555087946517');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width="700px";vizElement.style.height="700px";                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <div class="sticky-graphic" id='viz1555087946517' style='position: relative' width="100%"><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='311OverdueCalls&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555087946517');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width="650px";vizElement.style.height="650px";                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
       </div>
 
 
