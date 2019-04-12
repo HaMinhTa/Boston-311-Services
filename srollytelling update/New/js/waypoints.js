@@ -24,29 +24,33 @@ var WAYPOINT = new Waypoint({
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".calls")
-    .transition()
-    .duration(200)
+      .transition()
+    // .duration(200)
       .attr("fill", "#00ccff")
     } else if(direction === "up") {
+    d3.selectAll(".calls")
+      .attr("fill", "black")
     }
   }
 });
 
-var WAYPOINT2 = new Waypoint({
+var WAYPOINT1 = new Waypoint({
   element: document.querySelector("#trigger2"),
   handler: function(direction) {
     if(direction === "down") {
     d3.selectAll(".calls2")
-    .transition()
-    .duration(500)
+      .transition()
+    // .duration(500)
       .attr("fill", "#ffbb33")
     } else if(direction === "up") {
+    d3.selectAll(".calls2")
+      .attr("fill", "black")
     }
   }
 });
 
 
-var WAYPOINT3 = new Waypoint({
+var WAYPOINT2 = new Waypoint({
   element: document.querySelector("#trigger3"),
   offset: 100,
   handler: function(direction) {
@@ -74,30 +78,16 @@ var WAYPOINT3 = new Waypoint({
         }
       })
     } else if(direction === "up") {
-    }
-  }
+    d3.selectAll(".circle")
+      .attr("r", "8")
+      .attr("stroke-width", "1")
+      .attr("fill", "#00ccff")
+      }
+}
 });
 
-var WAYPOINT4 = new Waypoint({
-  element: document.querySelector("#trigger4"),
-  offset: 100,
-  handler: function(direction) {
-    if(direction === "down") {
-      circle
-        .transition()
-        .duration(2500)
-        .delay(20)
-        .attr("cx",width/2)
-        .attr("cy",height/2+20)
-        .style("fill","orange")
-        .attr("r",280)
-    } else if(direction === "up") {
 
-    }
-  }
-});
-
-var WAYPOINT5 = new Waypoint({
+var WAYPOINT3 = new Waypoint({
   element: document.querySelector("#trigger5a"),
   offset: 100,
   handler: function(direction) {
@@ -118,7 +108,7 @@ var WAYPOINT5 = new Waypoint({
   }
 });
 
-var WAYPOINT5 = new Waypoint({
+var WAYPOINT3 = new Waypoint({
   element: document.querySelector("#trigger5b"),
   offset: 100,
   handler: function(direction) {
@@ -140,7 +130,7 @@ var WAYPOINT5 = new Waypoint({
 });
 
 
-var WAYPOINT5 = new Waypoint({
+var WAYPOINT4 = new Waypoint({
   element: document.querySelector("#trigger5c"),
   offset: 100,
   handler: function(direction) {
@@ -157,6 +147,27 @@ var WAYPOINT5 = new Waypoint({
                 .force('y', forceSplitByCategoryY)
                 .alphaTarget(0.1)
                 .restart()
+    }
+  }
+});
+
+var WAYPOINT5 = new Waypoint({
+  element: document.querySelector("#trigger4"),
+  offset: 100,
+  handler: function(direction) {
+    if(direction === "down") {
+      circle
+        .transition()
+        .duration(2500)
+        .delay(20)
+        .attr("cx",width/2)
+        .attr("cy",height/2+20)
+        .style("fill","orange")
+        .attr("r",280)
+    } else if(direction === "up") {
+      circle
+        .transition()
+        .attr("r",0)
     }
   }
 });

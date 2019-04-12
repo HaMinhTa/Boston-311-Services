@@ -91,9 +91,3 @@ var yLabel = svg.append("text")
   .attr("text-anchor","middle")
   .attr("transform","rotate(-90)")
   .text("Number of calls");
-
-// var tooltip = d3.select("body")
-//   .append("div")
-//   .attr("class", "tooltip")
-//   .style("position", "absolute")
-//   .style("background", "yellow");

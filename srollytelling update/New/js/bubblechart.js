@@ -79,7 +79,7 @@ function translateCircle(d) {
 const forceSplit = d3.forceX(d => {
   if (d["year"] === 2012) { return width / 4; }
   else                    { return (3 * width) / 4; }
-}).strength(1);
+}).strength(0.5);
 const forceSplitByCategoryX = d3.forceX(d => {
   var offset = getRadius(d);
   if (d["year"] === 2012) { offset *= -1; }
@@ -103,7 +103,7 @@ const forceSplitByCategoryX = d3.forceX(d => {
     case "Highway Maintenance":
       return grid[8].x + offset;
   }
-}).strength(0.9);
+}).strength(0.4);
 const forceSplitByCategoryY = d3.forceY(d => {
   switch (d["reason"]) {
     case "Sanitation":
@@ -125,7 +125,7 @@ const forceSplitByCategoryY = d3.forceY(d => {
     case "Highway Maintenance":
       return grid[8].y;
   }
-}).strength(0.9);
+}).strength(0.4);
 const forceJoin = d3.forceX(d => width / 2).strength(0.07);
 const forceY = d3.forceY(height / 2).strength(0.07);
 const forceCenter = d3.forceCenter(width / 2, height / 2);

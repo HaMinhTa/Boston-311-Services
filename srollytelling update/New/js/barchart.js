@@ -54,20 +54,19 @@ var yScale = d3.scaleLinear()
 // Draw Axes
 
 var xAxis = svg.append("g")
+    .attr("class","axis")
     .call(d3.axisBottom(xScale))
     .attr("transform", `translate(0, ${height - margin.bottom})`)
     .selectAll("text")
       .style("text-anchor", "end")
       .attr("dx", "-.8em")
       .attr("dy", ".15em")
-      .attr("transform", "rotate(-65)")
-      .attr("font-size", "12px");
+      .attr("transform", "rotate(-65)");
 
 var yAxis = svg.append("g")
+    .attr("class","axis")
     .call(d3.axisLeft(yScale))
-    .attr("transform", `translate(${margin.left}, 0)`)
-    .selectAll("text")
-    .attr("font-size", "12px");
+    .attr("transform", `translate(${margin.left}, 0)`);
 
 // Draw Labels
 
@@ -109,7 +108,7 @@ var chart1 = area.selectAll(".bar.calls")
     .attr("y", height - margin.bottom)
     .attr("width", xScale1.bandwidth())
     .attr("height", 0)
-    .attr("fill", "#ffffff")
+    .attr("fill", "black")
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill", "#D3D3D3");
       tooltip.transition().duration(100)
@@ -137,7 +136,7 @@ var chart2 = area.selectAll(".bar.calls2")
     .attr("y", height - margin.bottom)
     .attr("width", xScale1.bandwidth())
     .attr("height", 0)
-    .attr("fill", "#ffffff")
+    .attr("fill", "black")
     .on("mouseover", function(d,i) {
       d3.select(this).attr("fill", "#D3D3D3");
       tooltip.transition().duration(100)

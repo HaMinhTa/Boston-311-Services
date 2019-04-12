@@ -5,7 +5,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cardo');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
-
+article {
+  background-color: black;
+}
 
 
 header {
@@ -28,8 +30,9 @@ h1 {
 }
 
 section {
-  background-color: /*#E0E0E0*/ white;
-  /*opacity: 0.8;*/
+  background-color: black;
+  color: white;
+  opacity: 0.8;
 }
 
 h2 {
@@ -84,6 +87,18 @@ a:hover {
   margin: auto;
 }
 
+#viz1554849290060 {
+  padding-left: 60px;
+}
+
+.axisLabel {
+  color: white;
+}
+
+.axis {
+  color: white;
+  font-size: 14px;
+}
 
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
 
