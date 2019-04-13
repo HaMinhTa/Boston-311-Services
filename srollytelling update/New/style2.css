@@ -1,38 +1,29 @@
-
-/* Place your styles in this section */
+/* Imported styles */
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Cardo');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+/* ----- Type selector styles ----- */
 article {
   background-color: black;
 }
 
-
 header {
   background-image: url("images/background1.jpg");
   background-size: cover;
-  height: 880px;
+  height: 850px;
 }
 
 h1 {
   text-align: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 200px;
   color:  white;
   font-weight: bold;
   font-family: Libre Baskerville;
   font-size: 72px;
   line-height: 1.5;
   float: left;
-
-}
-
-section {
-  background-color: black;
-  color: white;
-  opacity: 0.8;
 }
 
 h2 {
@@ -43,22 +34,22 @@ h2 {
 
 h4 {
   text-align: left;
-}
-
-.intro {
-  width: 60%;
-  margin-left: 20%;
-  line-height: 1.8;
-  font-family: Georgia;
-  font-size: 16px;
-
-}
-
-.sticky-content {
-  line-height: 1.8;
-  font-family: Georgia;
   font-size: 16px;
 }
+
+p {
+  height: 100vh;
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+section {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+}
+
+/* ----- Class selector styles ----- */
 
 a:link, a:visited {
   color: #00ccff;
@@ -67,28 +58,6 @@ a:link, a:visited {
 
 a:hover {
   text-decoration: underline;
-}
-
-.links line {
-  stroke: #999;
-  stroke-opacity: 0.6;
-}
-
-.nodes circle {
-  stroke: #fff;
-  stroke-width: 0.5px;
-}
-
-.button {
-  font-size: 22px;
-  padding: 10px 10px;
-  float: left;
-  display: block;
-  margin: auto;
-}
-
-#viz1555087946517 {
-  padding-left: 60px;
 }
 
 .axisLabel {
@@ -101,10 +70,33 @@ a:hover {
   font-size: 14px;
 }
 
+.intro {
+  width: 60%;
+  margin-left: 20%;
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+}
+
+.intrograph {
+  height: 20vh;
+
+}
+
 .legend {
   font-size: 25px;
   font-family: Helvetica, sans-serif;
 }
+
+.tooltip {
+  z-index: 1000;
+}
+
+/* ----- ID selector styles ----- */
+#viz1555087946517 {
+  padding-left: 60px;
+}
+
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
 
 body, html {
@@ -132,8 +124,6 @@ body, html {
 
 .sticky-content {
   line-height: 1.8;
-  font-family: Georgia;
-  font-size: 16px;
   position: relative;
   display: flex;
   flex: 1 0 50%;
@@ -159,15 +149,91 @@ body, html {
     -moz-box-sizing: border-box;
 }
 
-.tooltip {
-  z-index: 1000;
+
+/* Responsive Design */
+
+/* For mobile */
+@media only screen and (max-width: 600px) {
+  .intrograph {
+    height: 60vh;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+/* Mengjiao code */
+/*
+  #cover {
+    width: 100%;
+  }
+  .centered{
+    font-size: 100%;
+  }
+  .intro {
+    width: 100%;
+    margin-left: 0%;
+    line-height: 1.8;
+    font-family: Georgia;
+    font-size: 16px;
+  }
+  .intrograph{
+    width: 100%;
+    height: 35vh;
+  }
+  .sticky-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+
+  }
+  .sticky-content {
+    line-height: 1.8;
+    font-family: Georgia;
+    font-size: 16px;
+    position: relative;
+  }
+  .sticky-graphic {
+    width: 3vw;
+    z-index: -100;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    flex: 1 0 50%;
+    text-align: center;
+    box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+  }
+  section {
+    background-color: black;
+    color: white;
+    opacity: 1;
+  }
+  }
+@media only screen and (min-width: 600px){
+  .intrograph{
+    width: 100%;
+    height: 30vh;
+  }
+  .intro {
+    width: 90%;
+    margin-left: 5%;
+    line-height: 1.8;
+    font-family: Georgia;
+    font-size: 16px;
+  }
 }
-
-p {
-  height: 100vh;
+@media only screen and (min-width: 768px){
+  .intrograph{
+    width: 100%;
+    height: 20vh;
+  }
 }
-
-.intrograph {
-  height: 15vh;
-
+@media only screen and (min-width: 992px){
+  .intrograph{
+    width: 100%;
+    height: 17.5vh;
+  } */
 }
