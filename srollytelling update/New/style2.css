@@ -1,16 +1,14 @@
-
-/* Place your styles in this section */
+/* Imported styles */
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Cardo');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
+/* ----- Type selector styles ----- */
 article {
   background-color: black;
   width: 100%;
 }
-
-
 
 header {
   background-image: url("images/background1.jpg");
@@ -18,46 +16,15 @@ header {
   height: 850px;
 }
 
-/* container holding the image and the text */
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-
-}
-/* centered text */
-.centered{
-  position: absolute;
-  top: 30%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-
-}
-#cover{
-  width: 100%;
-}
-
 h1 {
   text-align: center;
-
   padding-top: 200px;
-  padding-bottom: 0px;
-
-  font-size: 6vw;
   color:  white;
   font-weight: bold;
   font-family: Libre Baskerville;
-  /* font-size: 65px; */
+  font-size: 72px;
   line-height: 1.5;
   float: left;
-  z-index: 2000;
-
-}
-
-section {
-  background-color: black;
-  color: white;
-  opacity: 0.8;
 }
 
 h2 {
@@ -68,22 +35,22 @@ h2 {
 
 h4 {
   text-align: left;
-}
-
-.intro {
-  width: 70%;
-  margin-left: 15%;
-  line-height: 1.8;
-  font-family: Georgia;
-  font-size: 16px;
-
-}
-
-.sticky-content {
-  line-height: 1.8;
-  font-family: Georgia;
   font-size: 16px;
 }
+
+
+p {
+  font-family: Georgia;
+  font-size: 18px;
+}
+
+section {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+}
+
+/* ----- Class selector styles ----- */
 
 a:link, a:visited {
   color: #00ccff;
@@ -92,28 +59,6 @@ a:link, a:visited {
 
 a:hover {
   text-decoration: underline;
-}
-
-.links line {
-  stroke: #999;
-  stroke-opacity: 0.6;
-}
-
-.nodes circle {
-  stroke: #fff;
-  stroke-width: 0.5px;
-}
-
-.button {
-  font-size: 22px;
-  padding: 10px 10px;
-  float: left;
-  display: block;
-  margin: auto;
-}
-
-#viz1555098889410 {
-  padding-left: 60px;
 }
 
 .axisLabel {
@@ -126,11 +71,37 @@ a:hover {
   font-size: 14px;
 }
 
+.intro {
+  width: 60%;
+  margin-left: 20%;
+  line-height: 1.8;
+  font-family: Georgia;
+  font-size: 16px;
+}
+
+.intrograph {
+  height: 20vh;
+
+}
+
 .legend {
   font-size: 25px;
   font-family: Helvetica, sans-serif;
 }
+
+.tooltip {
+  z-index: 1000;
+}
+
+/* ----- ID selector styles ----- */
+#viz1555098889410 {
+  padding-left: 8%;
+}
+
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
+p {
+  height: 100vh;
+}
 
 body, html {
   margin: 0px;
@@ -157,8 +128,6 @@ body, html {
 
 .sticky-content {
   line-height: 1.8;
-  font-family: Georgia;
-  font-size: 16px;
   position: relative;
   display: flex;
   flex: 1 0 50%;
@@ -185,23 +154,15 @@ body, html {
     -moz-box-sizing: border-box;
 }
 
-.tooltip {
-  z-index: 1000;
-}
-
-p {
-  height: 100vh;
-}
-.intrograph {
-  height: 17.5vh;
-  width: 100%;
-
-}
+/* Responsive Design */
 
 /* For mobile */
 @media only screen and (max-width: 600px) {
   .intrograph {
-    height: 50vh;
+    height: 60vh;
+  }
 
+  h1 {
+    font-size: 30px;
   }
 }

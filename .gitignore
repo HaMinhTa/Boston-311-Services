@@ -1,2 +1,6 @@
 # OS Generated Files
 .DS_Store
+
+# Tableau Generated Files
+.twbr
+.twbx
