@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="lib/d3.v5.js"></script>
   <script src="lib/noframework.waypoints.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
   <script src="js/d3pie.min.js"></script>
 </head>
 <body>
@@ -46,11 +47,15 @@
 
     <div class="sticky-container">
       <section class="sticky-content">
-        <h2 id="trigger4">Popular Reasons for 311 Calls</h2>
+        <h2 id="triggerPieChart">Popular Reasons for 311 Calls</h2>
         <p>There are a number of ways a Bostonian can report a problem to 311. One of the least utilized methods is through Twitter, but a look at recent data from the social media site offers some context into who is reporting problems to the city.</p>
         <p>Harry Grillo - who otherwise goes by the Twitter name @RedBassett - tweeted at the Boston 311 Twitter account 89 times in 2018. By day, he runs a video lighting company, but in his spare time, he acts as a public transit activist and constantly advocates for bicyclist safety in the city.</p>
-        <!-- <div class="sticky-graphic" id="piechart" width="100%"></div> -->
+      </section>
+      <div class="sticky-graphic" id="piechart"></div>
+    </div>
 
+    <div class="sticky-container">
+      <section class="sticky-content">
         <p>Among those 10 added categories, <a href="https://www.masslive.com/news/2018/02/opioid_overdose_deaths_show_crisis_continues_for_massachusetts.html"> “Needle Program”</a>  and <a href="https://www.boston.gov/departments/animal-care-and-control"> “Animal Issues” </a> were two of the more popular, taking home 1.7 percent and 1.1 percent total.</p>
         <p id="triggerBubbleChart">Needle exchange programs allow drug users to trade in used needles for clean ones at specific sites, and are used to prevent the spread of disease or infection. The programs have existed in Boston and neighboring Cambridge since 1993, yet was only recently added as a category. The addition of this category to 311 data coincides with the rapidly increasing opioid drug problem the state, and particularly the city, is experiencing.</p>
         <p>The needle exchange were only reported to 311 <a href = "https://www.boston.gov/departments/recovery-services/">from 2015</a>.</p>

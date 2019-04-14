@@ -1,4 +1,4 @@
-var pie = new d3pie("pieChart", {
+var pie = new d3pie("myPie", {
 	"header": {
 		"title": {
 			"text": "Boston 311 Medium of Calls",
