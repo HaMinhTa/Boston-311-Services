@@ -80,7 +80,7 @@ a:hover {
 }
 
 .intrograph {
-  height: 20vh;
+  height: 18vh;
 
 }
 
@@ -153,6 +153,8 @@ body, html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+
+
 
 /* Responsive Design */
 
