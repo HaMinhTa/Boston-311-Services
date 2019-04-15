@@ -10,21 +10,16 @@ article {
   width: 100%;
 }
 
-header {
-  background-image: url("images/background1.jpg");
-  background-size: cover;
-  height: 850px;
-}
-
 h1 {
   text-align: center;
-  padding-top: 200px;
+  padding-top: 0;
   color:  white;
   font-weight: bold;
   font-family: Libre Baskerville;
-  font-size: 72px;
   line-height: 1.5;
   float: left;
+  z-index: 2000;
+  font-size: 5vw;
 }
 
 h2 {
@@ -97,6 +92,22 @@ a:hover {
   z-index: 1000;
 }
 
+/* container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  background-color: black;
+}
+/* centered text */
+.centered{
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+
+}
+
+
 /* ----- ID selector styles ----- */
 #viz1555098889410 {
   padding-left: 8%;
@@ -105,7 +116,6 @@ a:hover {
 
 #embeddedtweet {
   margin-left: 15%;
-  width: 150%;
 }
 
 #embeddedtweet1 {
@@ -113,6 +123,10 @@ a:hover {
   width: 150%;
 }
 
+#cover{
+  width: 100%;
+  height: 80%;
+}
 
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
 p {
@@ -172,15 +186,50 @@ body, html {
 
 
 
-/* Responsive Design */
+/* RESPONSIVE DESIGN */
 
-/* For mobile */
-@media only screen and (max-width: 600px) {
-  .intrograph {
-    height: 60vh;
-  }
+@media only screen and (max-width: 480px) {
+/* For mobile: */
+h1 {
+  font-size: 2vw;
+}
 
-  h1 {
-    font-size: 30px;
-  }
+.intrograph{
+  width: 100%;
+  height: auto;
+}
+
+.sticky-container {
+  flex-wrap: wrap;
+}
+
+.sticky-content {
+  flex: 1 0 100%;
+}
+
+.sticky-graphic {
+  flex: 1 0 100%;
+}
+
+}
+
+
+@media only screen and (max-width: 768px){
+.intrograph{
+  width: 100%;
+  height: auto;
+}
+
+.sticky-container {
+  flex-wrap: wrap;
+}
+
+.sticky-content {
+  flex: 1 0 100%;
+}
+
+.sticky-graphic {
+  flex: 1 0 100%;
+}
+
 }

@@ -295,8 +295,8 @@ var WAYPOINT6 = new Waypoint({
     if(direction === "down") {
       circle
         .transition()
+        .delay(1000)
         .duration(2500)
-        .delay(20)
         .attr("cx",width/2)
         .attr("cy",height/2+20)
         .style("fill","orange")
