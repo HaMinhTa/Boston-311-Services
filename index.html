@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="lib/d3.v5.js"></script>
   <script src="lib/noframework.waypoints.js"></script>
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script> -->
   <script src="js/d3pie.min.js"></script>
 </head>
 <body>
@@ -28,18 +27,18 @@
 
     <div class="sticky-container">
       <section class="sticky-content">
-        <h2 id="triggerBarChart2012">Number of Calls by Neighborhoods</h2>
-        <p>But where do the calls come from the most within Boston’s 23 neighborhoods? As it turns out, the answer, in short, is Dorchester, but the details provide much more insight than just that.</p>
-        <p id="triggerBarChart2018">Allston, with a population of nearly 20,000, had the highest calls per capita ratio, with more than one call for every other resident. Yet its next door neighbor Brighton is responsible for the least amount of calls in the city. The two neighborhoods are interchangeable, and filled with college students and recent graduates. Research into things like this can make ways for further improvements to the service if necessary.</p>
+        <h2 id="triggerBarChart2012">Number of Calls per Capita by Neighborhoods</h2>
+        <p id="triggerBarChart2018">Where do the calls come from the most within Boston’s 23 neighborhoods? The answer might seem obvious: Dorchester - Boston's largest neighborhood. But a look at the number of calls per capita for each neighborhood provides a different insight.</p>
+        <p id="triggerBarChartAllston">Allston, with a population of nearly 20,000, had the highest calls per capita ratio, with more than one call for every other resident. Yet its next door neighbor Brighton is responsible for the least amount of calls in the city. These two neighborhoods are, in some ways, similar in their residents, both filled with college students and recent graduates.</p>
       </section>
       <div class="sticky-graphic" id="barchart" width="100%"></div>
     </div>
 
     <div class="sticky-container">
       <section class="sticky-content">
-        <p>From 2012 to 2018, the use of 311 non-emergency calls is increased by 10 percent. That is likely because more constituents get knowledge of and use 311 non-emergency calls than before.</p>
+        <p>From 2012, when the 311 services started as the Mayor's hotline, until 2018, requests made to the number increased by 10 percent. More and more constituents are aware of and use 311 services than before.</p>
         <p id="triggerLineChart">No three years saw more variation in the call volume than 2014-2016, as there was an 850,000 call drop off between 2015 and 2016. That, according to Boston 311 Director Rocco Corigliano, is because of an uncharacteristic winter in 2015 in which there seemed to be “a two foot snow storm every week.”</p>
-        <p id="triggerPieChart">“That’s sort of like an anomaly, what we have before and after is what we typically have,” Corigliano said. “We reached over 110,000 calls in just February. Take that year out, and that’s pretty much the average.</p>
+        <p id="triggerPieChart">“That’s sort of like an anomaly, what we have before and after is what we typically have,” Corigliano said. “We reached over 110,000 calls in just February."</p>
       </section>
       <div class="sticky-graphic" id="linechart" width="100%"></div>
     </div>
@@ -47,13 +46,13 @@
     <div class="sticky-container">
       <section class="sticky-content">
         <h2>How Do Bostonians Requests 311 Services?</h2>
-        <!-- <p>People call 311 most often to report a pothole, get a street cleaned, pay a parking ticket or request a needle clean-up. In Boston specifically, where winter is harsh, 311 also receives winter service requests like: report unshoveled sidewalk, request to salt or plow a street or help with insufficient home heating.</p> -->
 
         <p>Boston 311 services are not only accessible by phone calls; constituents can connect to the service online and through an app.</p>
 
-        <p>One of the least utilized methods is through Twitter, but a look at recent data from the social media site offers some context into who is reporting problems to the city.</p>
+        <p>One of the least utilized methods is through Twitter. The 311 Twitter account is still in its infant stages, said Director Corigliano. Although 1,760 different people utilized it to report issues in the city, it accounts for the minority of requests to Boston 311.</p>
 
-        <p>The 311 Twitter account is still in its infant stages, said Director Corigliano, and though 1,760 different people utilized it to report issues in the city, it accounts for the minority of requests to Boston 311.</p>
+        <p>But a look at recent data from the social media site offers some context into who is reporting problems to the city.</p>
+
 
       </section>
       <div class="sticky-graphic" id="piechart"></div>
@@ -75,7 +74,7 @@
       <section class="sticky-content">
 
         <p>Twitter user @CoachBalto - real name Sam Balto - just narrowly missed out on the title of ‘most avid 311 tweeter.’</p>
-        <p id="triggerBubbleChart">The Roxbury gym teacher’s 84 tweets were mostly in regards to transportation in the Roxbury area, while some thanked the service for a quick response, others spoke to larger systemic problems such as a lack of language options in the 311 services app.</p>
+        <p>The Roxbury gym teacher’s 84 tweets were mostly in regards to transportation in the Roxbury area, while some thanked the service for a quick response, others spoke to larger systemic problems such as a lack of language options in the 311 services app.</p>
 
       </section>
 
@@ -88,36 +87,36 @@
 
     <div class="sticky-container">
       <section class="sticky-content">
-        <h2 id="triggerBubbleChartYear">What Do People Request 311 Services for?</h2>
-        <p>There were 39 different reasons for the calls in 2012. In 2018, that expanded to  46 reasons. 10 new reasons were added and three reasons removed.</p>
-        <p>Among those 10 added categories, <a href="https://www.masslive.com/news/2018/02/opioid_overdose_deaths_show_crisis_continues_for_massachusetts.html"> “Needle Program”</a>  and <a href="https://www.boston.gov/departments/animal-care-and-control"> “Animal Issues” </a> were two of the more popular, taking home 1.7 percent and 1.1 percent total.</p>
-        <p id="triggerBubbleChartType">Now, enforcement and abandoned vehicles are the reason most people called in 2018. Sometimes that’s because a beat-up Chevy Impala has been illegally parked for several days. Othertimes, it’s because someone left a boat with no motor underneath a bridge along the Neponset River., That saw a  15 percent from 2012. Street cleaning increased tremendously, from 0.01 percent in 2012 to 11.4 percent in 2018.</p>
-
-        <p>Needle exchange programs allow drug users to trade in used needles for clean ones at specific sites, and are used to prevent the spread of disease or infection. The programs have existed in Boston and neighboring Cambridge since 1993, yet was only recently added as a category. The addition of this category to 311 data coincides with the rapidly increasing opioid drug problem the state, and particularly the city, is experiencing.</p>
-        <p>The needle exchange were only reported to 311 <a href = "https://www.boston.gov/departments/recovery-services/">from 2015</a>.</p>
-        <p >Though the number of opioid overdose deaths in Boston remained similar from 2016 to 2017 - 196 to 193 - the number of calls received about the exchange program have skyrocketed over time. In 2015, the first year when the the Needle Program was logged as a reason for 311 calls, there were 297 calls. The number then rose to 1,043 calls in 2016, nearly four times as many... That jumped to 1,780 the following year, and 2,276 in 2018. This may have to do with an increased awareness about opioid addiction and reduced stigma surrounding it.</p>
-        <p>Now, enforcement and abandoned vehicles are the reason most people called in 2018. Sometimes that’s because a beat-up Chevy Impala has been illegally parked for several days. Other times, it’s because someone left a boat with no motor underneath a bridge along the Neponset River. That saw a 15 percent increase from 2012.</p>
+        <h2 id="triggerBubbleChart">What Do People Request 311 Services for?</h2>
+        <p id="triggerBubbleChartYear">There were 39 different reasons for 311 requests in 2012. In 2018, that expanded to  46 reasons. 10 new reasons were added and three reasons removed.</p>
+        <p>Sanitation and Highway Maintenance are always on top of the list of requests made to Boston 311.</p>
+        <p id="triggerBubbleChartType">Compared to 2012, an overwhelming number of requests for Enforcement & Abandoned Vehicles were made in 2018.</p>
+        <p>Someone reported a beat-up Chevy Impala has been illegally parked for several days. Another complained that someone left a boat with no motor underneath a bridge along the Neponset River.</p>
       </section>
       <div class="sticky-graphic" id="bubblechart" width="100%"></div>
     </div>
 
     <div class="sticky-container">
-      <section class="sticky-content" id="triggerBalloonChart">
-        <p>“Enforcement and abandoned vehicles” is the most popular call in 2018, which is 17 percent, and it increased by 15 percent from 2012. Next was “street cleaning,” which is 14 percent and it was increased by 5.5 percent. “Code enforcement” increased tremendously, from 0.01 percent in 2012 to 11.4 percent in 2018. (which neighborhoods most significant TK, we think that it’s probably the college neighborhoods like Brighton, Mission Hill, etc.) In 2018, there was a code violation call nearly every day. The spike happened in 2016, when the city went from 331 calls to 9,433 in just a year. That’s the same year that several pieces of legislation were passed to prevent overcrowding in apartments that housed undergraduate students. Though violations had been committed by landlords for years, they previously went unpunished, according to a 2016 Boston Globe story.</p>
-        <p>In 2012, few items aside from sanitation, highway maintenance, street lights and street cleaning demanded a high number of calls.  In 2012, there were 14 reasons for over 1000 calls, and 12 of them are under 10 percent, and 7 of them are under 5 percent. The sum of the calls for the other reasons is 4326, which is only 3.7 percent.</p>
-        <p>In 2018, there are 17 topics with over 1000 calls. Five of them are over 10 percent and 11 of them are under 4 percent. There are 29 reasons with less than 1000 calls and the sum of the calls for all these reasons is 4268, which is 3 percent.</p>
+      <section class="sticky-content">
+        <h2 id="triggerBalloonChart">Requests for Code Enforcement</h2>
+        <p>Code Enforcement requests saw the most dramatic increase in the six-year span. In 2018, there was a code violation call nearly every day. The spike happened in 2016, when the city went from 331 of these requests to 9,433 in just a year</p>
+        <p>This is the same year that several pieces of legislation were passed to prevent overcrowding in apartments housing students. Though violations had been committed by landlords for years, they previously went unpunished, according to a <a href="https://www.bostonglobe.com/metro/2016/09/07/another-sign-fall-boston-issues-nearly-fines-landlords-during-move/N6E0LdRjQ8CvfBgFQP3hUL/story.html">2016 Boston Globe story.</a></p>
+        <p>Code enforcement complaints are commonly reported in poorer neighborhoods. Police departments have been known to crack down on tall grass and broken windows in an attempt to keep crime out of neighborhoods. Yet the data defies this theory. Though Dorchester has the largest number of code enforcement calls, Allston has the most calls per capita. Downtown, West Roxbury and Beacon Hill, all considered wealthy neighborhoods, are toward the top of the list.</p>
+
+        <p>That may have more to do with what constitutes a Code Enforcement complaint, Boston 311 Director Corigliano said. He added that one of the most common code enforcement calls around election season is to take down campaign flyers and signs from city property, such as street lamps and traffic light poles. There’s likely to be more of those types of signs in wealthier neighborhoods because more people, including tourists, traffic them.</p>
+
       </section>
       <div class="sticky-graphic" id="balloonchart" width="100%"></div>
     </div>
 
     <div class="sticky-container">
       <section class="sticky-content">
-        <h2>How Fast Requests are Solved in Neighborhoods</h2>
-        <p>In Jamaica Plain, the percentage of 311 requests that were not solved on time more-than doubled from 14 to 30 percent from 2011 and 2018, despite the number of total requests remaining consistent. Comparatively,(TK  other neighborhoods with similar problems)</p>
-        <p>Meanwhile, the percentage of 311 requests that weren’t solved on time dropped significantly in both Back Bay and the financial district, two of the wealthiest neighborhoods in the city.</p>
-        <p>One interesting outlier is the Fenway neighborhood. In 2011, that neighborhood did not contribute much to the overall number of 311 complaints - just 2,363 -  and comparatively only had about 11 percent of its requests solved later than the projected completion date. That made it on of the most efficient neighborhoods in the city, along with Hyde Park, which also was only overdue for just 11 percent of calls, and West Roxbury.</p>
+        <h2>Are all 311 Requests Solved on-time?</h2>
+        <p></p>
+        <p></p>
+        <p></p>
       </section>
-      <div class="sticky-graphic"  id='viz1555098889410' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='311OverdueCalls&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555098889410');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width="700px";vizElement.style.height="700px";                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <div class="sticky-graphic" id="viz1555098889410"><noscript><a href='#'><img alt="" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1_rss.png" style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='311OverdueCalls&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;31&#47;311OverdueCalls&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555098889410');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width="700px";vizElement.style.height="700px";                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
       </div>
     </div>
   </article>

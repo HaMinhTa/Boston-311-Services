@@ -33,6 +33,8 @@ h2 {
   color: #FDB717;
   padding-top: 0;
   padding-bottom: 50%;
+  height: 100vh;
+  padding-top: 60%;
 }
 
 h4 {
@@ -73,18 +75,6 @@ a:hover {
   font-size: 14px;
 }
 
-#embeddedtweet {
-  margin-left: 15%;
-  width: 150%;
-}
-
-#embeddedtweet1 {
-  margin-left: 15%;
-  width: 150%;
-}
-
-
-
 .intro {
   width: 60%;
   margin-left: 20%;
@@ -110,7 +100,19 @@ a:hover {
 /* ----- ID selector styles ----- */
 #viz1555098889410 {
   padding-left: 8%;
+  padding-top: 5%;
 }
+
+#embeddedtweet {
+  margin-left: 15%;
+  width: 150%;
+}
+
+#embeddedtweet1 {
+  margin-left: 15%;
+  width: 150%;
+}
+
 
 /* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
 p {

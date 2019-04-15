@@ -20,7 +20,7 @@ var WAYPOINT = new Waypoint({
 */
 
 /* ----- BARCHART 2012 CALLS ----- */
-var WAYPOINT0 = new Waypoint({
+var WAYPOINT1 = new Waypoint({
   element: document.querySelector("#triggerBarChart2012"),
   handler: function(direction) {
     if(direction === "down") {
@@ -35,7 +35,7 @@ var WAYPOINT0 = new Waypoint({
 });
 
 /* ----- BARCHART 2018 CALLS ----- */
-var WAYPOINT1 = new Waypoint({
+var WAYPOINT1b = new Waypoint({
   element: document.querySelector("#triggerBarChart2018"),
   offset: 500,
   handler: function(direction) {
@@ -43,9 +43,39 @@ var WAYPOINT1 = new Waypoint({
     d3.selectAll(".calls2")
       .transition()
       .attr("fill", "#ffbb33")
-    } else if(direction === "up") {
+    } else if (direction === "up") {
     d3.selectAll(".calls2")
       .attr("fill", "black")
+    }
+  }
+});
+
+var WAYPOINT1c = new Waypoint({
+  element: document.querySelector("#triggerBarChartAllston"),
+  offset: 500,
+  handler: function(direction) {
+    if (direction === "down") {
+      d3.selectAll(".calls")
+        .style("opacity", function(d) {
+          if (d.area === "Allston" || d.area === "Brighton") {
+            return "1";
+          } else {
+            return "0.2";
+          }
+        });
+      d3.selectAll(".calls2")
+        .style("opacity", function(d) {
+          if (d.area === "Allston" || d.area === "Brighton") {
+            return "1"
+          } else {
+            return "0.2";
+          }
+        });
+    } else {
+      d3.selectAll(".calls")
+        .style("opacity", "1");
+      d3.selectAll(".calls2")
+        .style("opacity", "1");
     }
   }
 });
@@ -212,7 +242,9 @@ var WAYPOINT3 = new Waypoint({
         		}
         	}
         });
-    } else if(direction === "up") {}
+    } else if(direction === "up") {
+
+    }
   }
 });
 

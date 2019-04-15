@@ -20,7 +20,7 @@ var node_data = [
   {"reason": "Housing", "number": 7251, "year": 2012},
   {"reason": "Signs & Signals", "number": 6340, "year": 2012},
   {"reason": "Recycling", "number": 5202, "year": 2012},
-  {"reason": "Graffiti", "number": 3985, "year": 2012},
+  {"reason": "Enforcement & Abandoned Vehicles", "number": 2569, "year": 2012},
 
   {"reason": "Sanitation", "number": 15196, "year": 2018},
   {"reason": "Trees", "number": 4634, "year": 2018},
@@ -30,7 +30,7 @@ var node_data = [
   {"reason": "Housing", "number": 3607, "year": 2018},
   {"reason": "Signs & Signals", "number": 7865, "year": 2018},
   {"reason": "Recycling", "number": 4285, "year": 2018},
-  {"reason": "Graffiti", "number": 1779, "year": 2018}
+  {"reason": "Enforcement & Abandoned Vehicles", "number": 22293, "year": 2018}
 ];
 
 /* Defines a grid of (x,y) coordinates to position bubbles when categorized by type */
@@ -66,13 +66,13 @@ const forceSplitByCategoryX = d3.forceX(d => {
   switch (d["reason"]) {
     case "Sanitation":
       return grid[0].x + offset;
-    case "Graffiti":
+    case "Housing":
       return grid[1].x + offset;
     case "Street Lights":
       return grid[2].x + offset;
     case "Street Cleaning":
       return grid[3].x + offset;
-    case "Housing":
+    case "Enforcement & Abandoned Vehicles":
       return grid[4].x + offset;
     case "Trees":
       return grid[5].x + offset;
@@ -89,13 +89,13 @@ const forceSplitByCategoryY = d3.forceY(d => {
   switch (d["reason"]) {
     case "Sanitation":
       return grid[0].y;
-    case "Graffiti":
+    case "Housing":
       return grid[1].y;
     case "Street Lights":
       return grid[2].y;
     case "Street Cleaning":
       return grid[3].y;
-    case "Housing":
+    case "Enforcement & Abandoned Vehicles":
       return grid[4].y;
     case "Trees":
       return grid[5].y;

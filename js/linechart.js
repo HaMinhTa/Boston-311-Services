@@ -90,4 +90,4 @@ var yLabel = svg.append("text")
   .attr("x", -height/2 -60)
   .attr("text-anchor","middle")
   .attr("transform","rotate(-90)")
-  .text("Number of calls");
+  .text("Number of Requests");
