@@ -31,6 +31,8 @@ h2 {
   font-family: Helvetica;
   font-size: 22px;
   color: #FDB717;
+  padding-top: 0;
+  padding-bottom: 50%;
 }
 
 h4 {
@@ -70,6 +72,18 @@ a:hover {
   color: white;
   font-size: 14px;
 }
+
+#embeddedtweet {
+  margin-left: 15%;
+  width: 150%;
+}
+
+#embeddedtweet1 {
+  margin-left: 15%;
+  width: 150%;
+}
+
+
 
 .intro {
   width: 60%;
