@@ -7,9 +7,16 @@ const GRAY = "#D3D3D3";
 var width = 800,
     height = 700;
 
-var svg = d3.select("#bubblechart").append("svg")
-  .attr("width", width)
-  .attr("height", height);
+// var svg = d3.select("#bubblechart").append("svg")
+//   .attr("width", width)
+//   .attr("height", height);
+
+var svg = d3.select("#bubblechart")
+ .append("svg")
+ .attr("width","100%")
+ .attr("height", "100%")
+ .attr('viewBox','-100 -200 900 700')
+ .attr('preserveAspectRatio','xMinYMin');
 
 var node_data = [
   {"reason": "Sanitation", "number": 27208, "year": 2012},

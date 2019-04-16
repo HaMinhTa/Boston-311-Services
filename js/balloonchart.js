@@ -2,12 +2,19 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20};
     width = 800 - margin.right - margin.left;
     height = 600 - margin.top - margin.bottom;
 
+// var svg = d3.select("#balloonchart")
+//     .append("svg")
+//     .attr("width", width + margin.right + margin.left)
+//     .attr("height", height + margin.top + margin.bottom)
+//     .append("g")
+//     .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
 var svg = d3.select("#balloonchart")
-    .append("svg")
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+   .append("svg")
+   .attr("width","100%")
+   .attr("height", "100%")
+   .attr('viewBox','-50 -50 800 600')
+   .attr('preserveAspectRatio','xMinYMin');
 
 var circle = svg.append("circle")
   .attr("class","animateCircle")

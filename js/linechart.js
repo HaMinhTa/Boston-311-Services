@@ -2,10 +2,17 @@ var width = document.querySelector("#linechart").clientWidth +300;
 var height = 600;
 var margin = {top: 200, left: 100, right: 25, bottom: 70};
 
+// var svg = d3.select("#linechart")
+//   .append("svg")
+//   .attr("width", width)
+//   .attr("height", height);
+
 var svg = d3.select("#linechart")
   .append("svg")
-  .attr("width", width)
-  .attr("height", height);
+  .attr("width","100%")
+  .attr("height", "100%")
+  .attr('viewBox','-50 -50 1050 600')
+  .attr('preserveAspectRatio','xMinYMin');
 
 var data = [
   {year: 2012, calls: 117832},

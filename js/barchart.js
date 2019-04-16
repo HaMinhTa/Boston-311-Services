@@ -3,13 +3,20 @@
 var margin = {top: 60, right: 20, bottom: 60, left: 50};
     width = document.querySelector("#barchart").clientWidth + 300;
     height = 600;
-var svg = d3.select("#barchart")
-    .append("svg")
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+// var svg = d3.select("#barchart")
+//     .append("svg")
+//     .attr("width", width + margin.right + margin.left)
+//     .attr("height", height + margin.top + margin.bottom)
+//     .append("g")
+//     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+var svg = d3.select("#barchart")
+  .append("svg")
+  .attr("width","100%")
+  .attr("height", "100%")
+  .attr('viewBox','-50 -50 1000 500')
+  .attr('preserveAspectRatio','xMinYMin');
+  
 // Define data
 
 var data = [
