@@ -1,8 +1,8 @@
 // Generate svg
 
 var margin = {top: 60, right: 20, bottom: 60, left: 50};
-    width = document.querySelector("#barchart").clientWidth + 300;
-    height = 600;
+    width = document.querySelector("#barchart").clientWidth;
+    height = 650;
 
 // var svg = d3.select("#barchart")
 //     .append("svg")
@@ -81,7 +81,7 @@ var yAxis = svg.append("g")
 var xLabel = svg.append("text")
   .attr("class", "axisLabel")
   .attr("x", width/2)
-  .attr("y", height + margin.bottom - 10)
+  .attr("y", height + margin.bottom)
   .attr("text-anchor", "middle")
   .text("Neighborhood");
 

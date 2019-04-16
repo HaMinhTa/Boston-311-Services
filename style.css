@@ -47,6 +47,7 @@ section {
   background-color: black;
   color: white;
   opacity: 0.8;
+  width: 30%;
 }
 
 /* ----- Class selector styles ----- */
@@ -62,12 +63,12 @@ a:hover {
 
 .axisLabel {
   fill: white;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .axis {
   color: white;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .intro {
@@ -115,19 +116,19 @@ a:hover {
 }
 
 #embeddedtweet {
-  margin-left: 8%;
+  margin-left: 18%;
 }
 
 #embeddedtweet1 {
-  margin-left: 8%;
+  margin-left: 18%;
 }
 
 #embeddedtweet2 {
-  margin-left: 8%;
+  margin-left: 18%;
 }
 
 #embeddedtweet3 {
-  margin-left: 8%;
+  margin-left: 18%;
 }
 
 #cover{
@@ -158,7 +159,7 @@ body, html {
   padding-right: 10px;
   position: relative;
   z-index: 100;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -167,7 +168,7 @@ body, html {
   line-height: 1.8;
   position: relative;
   display: flex;
-  flex: 1 0 50%;
+  flex: 1 0 30%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;

@@ -121,118 +121,119 @@ var seen = false;
 
 /* ----- PIE CHART ----- */
 var WAYPOINT3 = new Waypoint({
-  element: document.querySelector("#triggerPieChart"),
-  handler: function(direction) {
-    if (direction === "down" && seen === false) {
-      seen = true;
-      var pie = new d3pie("piechart", {
-        "header": {
-        		"title": {
-        			"text": "Boston 311 Medium of Calls",
-        			"color": "#fdfdfd",
-        			"fontSize": 26,
-        			"font": "georgia"
-        		},
-        		"subtitle": {
-        			"color": "#999999",
-        			"fontSize": 12,
-        			"font": "open sans"
-        		},
-        		"titleSubtitlePadding": 16
-        	},
-        	"footer": {
-        		"color": "#999999",
-        		"fontSize": 10,
-        		"font": "open sans",
-        		"location": "bottom-left"
-        	},
-        	"size": {
-        		"canvasWidth": 720,
-        		"pieOuterRadius": "90%"
-        	},
-        	"data": {
-        		"sortOrder": "value-desc",
-        		"content": [
-              {
-                "label": "Citizen Connect App",
-                "value": 330570,
-                "color": "#00c9ff"
-              },
-              {
-                "label": "City Worker App",
-                "value": 110319,
-                "color": "#128bd7"
-              },
-              {
-                "label": "Constituent Calls",
-                "value": 459601,
-                "color": "#ffbb33"
-              },
-              {
-                "label": "Employee Generated",
-                "value": 72299,
-                "color": "#2661d6"
-              },
-              {
-                "label": "Self Service",
-                "value": 70124,
-                "color": "#e88829"
-              },
-              {
-                "label": "Twitter",
-                "value": 1558,
-                "color": "#2426e6"
-              }
-        		]
-        	},
-        	"labels": {
-        		"outer": {
-        			"pieDistance": 23
-        		},
-        		"inner": {
-        			"hideWhenLessThanPercentage": 3
-        		},
-        		"mainLabel": {
-        			"color": "#fbfafa",
-        			"fontSize": 12
-        		},
-        		"percentage": {
-        			"color": "#ffffff",
-        			"fontSize": 12,
-        			"decimalPlaces": 0
-        		},
-        		"value": {
-        			"color": "#adadad",
-        			"fontSize": 14
-        		},
-        		"lines": {
-        			"enabled": true
-        		},
-        		"truncation": {
-        			"enabled": true
-        		}
-        	},
-        	"tooltips": {
-        		"enabled": true,
-        		"type": "placeholder",
-        		"string": "{label}: {value}, {percentage}%",
-        		"styles": {
-        			"borderRadius": 4,
-        			"fontSize": 14,
-        			"padding": 8
-        		}
-        	},
-        	"effects": {
-        		"pullOutSegmentOnClick": {
-        			"effect": "linear",
-        			"speed": 400,
-        			"size": 8
-        		}
-        	},
-        	"callbacks": {}
-        });
-    } else {}
-  }
+    element: document.querySelector("#triggerPieChart"),
+    handler: function(direction) {
+        if (direction === "down" && seen === false) {
+            seen = true;
+            var pie = new d3pie("piechart", {
+                "header": {
+                    "title": {
+                        "text": "Boston 311 Medium of Calls",
+                        "color": "#fdfdfd",
+                        "fontSize": 26,
+                        "font": "georgia"
+                    },
+                    "subtitle": {
+                        "color": "#999999",
+                        "fontSize": 12,
+                        "font": "open sans"
+                    },
+                    "titleSubtitlePadding": 16
+                },
+                "footer": {
+                    "color": "#999999",
+                    "fontSize": 10,
+                    "font": "open sans",
+                    "location": "bottom-left"
+                },
+                "size": {
+                    "canvasHeight": 700,
+                    "canvasWidth": 820,
+                    "pieOuterRadius": "86%"
+                },
+                "data": {
+                    "sortOrder": "value-desc",
+                    "content": [{
+                            "label": "Citizen Connect App",
+                            "value": 330570,
+                            "color": "#00c9ff"
+                        },
+                        {
+                            "label": "City Worker App",
+                            "value": 110319,
+                            "color": "#128bd7"
+                        },
+                        {
+                            "label": "Constituent Calls",
+                            "value": 459601,
+                            "color": "#ffbb33"
+                        },
+                        {
+                            "label": "Employee Generated",
+                            "value": 72299,
+                            "color": "#2661d6"
+                        },
+                        {
+                            "label": "Self Service",
+                            "value": 70124,
+                            "color": "#e88829"
+                        },
+                        {
+                            "label": "Twitter",
+                            "value": 1558,
+                            "color": "#2426e6"
+                        }
+                    ]
+                },
+                "labels": {
+                    "outer": {
+                        "pieDistance": 20
+                    },
+                    "inner": {
+                        "hideWhenLessThanPercentage": 3
+                    },
+                    "mainLabel": {
+                        "color": "#ffffff",
+                        "fontSize": 16
+                    },
+                    "percentage": {
+                        "color": "#ffffff",
+                        "fontSize": 18,
+                        "decimalPlaces": 0
+                    },
+                    "value": {
+                        "color": "#adadad",
+                        "fontSize": 14
+                    },
+                    "lines": {
+                        "enabled": true
+                    },
+                    "truncation": {
+                        "enabled": true
+                    }
+                },
+                "tooltips": {
+                    "enabled": true,
+                    "type": "placeholder",
+                    "string": "{label}: {value}, {percentage}%",
+                    "styles": {
+                        "borderRadius": 4,
+                        "fontSize": 14,
+                        "padding": 8
+                    }
+                },
+                "effects": {
+                    "pullOutSegmentOnClick": {
+                        "effect": "linear",
+                        "speed": 400,
+                        "size": 8
+                    }
+                },
+                "callbacks": {}
+            });
+
+        } else {}
+    }
 });
 
 /* ----- BUBBLE CHART ----- */

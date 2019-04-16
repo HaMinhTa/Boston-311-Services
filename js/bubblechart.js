@@ -1,4 +1,3 @@
-
 const LIGHT_BLUE = "#b3f0ff";
 const BLUE = "#00ccff";
 const ORANGE ="#ffbb33";
@@ -15,7 +14,7 @@ var svg = d3.select("#bubblechart")
  .append("svg")
  .attr("width","100%")
  .attr("height", "100%")
- .attr('viewBox','-100 -200 900 700')
+ .attr('viewBox','-40 -100 900 700')
  .attr('preserveAspectRatio','xMinYMin');
 
 var node_data = [
