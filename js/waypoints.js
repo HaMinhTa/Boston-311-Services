@@ -148,9 +148,9 @@ var WAYPOINT3 = new Waypoint({
                     "location": "bottom-left"
                 },
                 "size": {
-                    "canvasHeight": width/1.2,
-                    "canvasWidth": 820,
-                    "pieOuterRadius": "86%"
+                    "canvasHeight": 800,
+                    "canvasWidth": 800,
+                    "pieOuterRadius": "90%"
                 },
                 "data": {
                     "sortOrder": "value-desc",
@@ -232,7 +232,11 @@ var WAYPOINT3 = new Waypoint({
                 },
                 "callbacks": {}
             });
-
+            d3.select("#piechart").select("svg")
+              .attr("width","100%")
+              .attr("height","100%")
+              .attr("viewBox", "-100 -50 1000 1000")
+              .attr("preserveAspectRatio", "xMinYMin");
         } else {}
     }
 });
