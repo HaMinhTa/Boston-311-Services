@@ -124,6 +124,7 @@ var WAYPOINT3 = new Waypoint({
     element: document.querySelector("#triggerPieChart"),
     handler: function(direction) {
         if (direction === "down" && seen === false) {
+            var width = document.querySelector("#barchart").clientWidth;
             seen = true;
             var pie = new d3pie("piechart", {
                 "header": {
@@ -147,7 +148,7 @@ var WAYPOINT3 = new Waypoint({
                     "location": "bottom-left"
                 },
                 "size": {
-                    "canvasHeight": 700,
+                    "canvasHeight": width/1.3,
                     "canvasWidth": 820,
                     "pieOuterRadius": "86%"
                 },
