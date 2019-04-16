@@ -117,26 +117,28 @@ var WAYPOINT2 = new Waypoint({
 }
 });
 
+var seen = false;
+
 /* ----- PIE CHART ----- */
 var WAYPOINT3 = new Waypoint({
   element: document.querySelector("#triggerPieChart"),
   handler: function(direction) {
-    if(direction === "down") {
-      var pie = new d3pie("#piechart", {
-        	"header": {
+    if (direction === "down" && seen === false) {
+      seen = true;
+      var pie = new d3pie("piechart", {
+        "header": {
         		"title": {
         			"text": "Boston 311 Medium of Calls",
-        			"color": "#ffffff",
+        			"color": "#fdfdfd",
         			"fontSize": 26,
-        			"font": "open sans"
+        			"font": "georgia"
         		},
         		"subtitle": {
-        			"text": "How Bostonians request 311 services",
         			"color": "#999999",
-        			"fontSize": 16,
+        			"fontSize": 12,
         			"font": "open sans"
         		},
-        		"titleSubtitlePadding": 12
+        		"titleSubtitlePadding": 16
         	},
         	"footer": {
         		"color": "#999999",
@@ -145,68 +147,63 @@ var WAYPOINT3 = new Waypoint({
         		"location": "bottom-left"
         	},
         	"size": {
-        		"canvasHeight": 720,
-        		"canvasWidth": 800,
-        		"pieOuterRadius": "93%"
+        		"canvasWidth": 720,
+        		"pieOuterRadius": "90%"
         	},
         	"data": {
+        		"sortOrder": "value-desc",
         		"content": [
-        			{
-        				"label": "Citizen Connect App",
-        				"value": 330570,
-        				"color": "#00c9ff"
-        			},
-        			{
-        				"label": "City Worker App",
-        				"value": 110319,
-        				"color": "#128bd7"
-        			},
-        			{
-        				"label": "Constituent Calls",
-        				"value": 459601,
-        				"color": "#fbe901"
-        			},
-        			{
-        				"label": "Employee Generated",
-        				"value": 72299,
-        				"color": "#eb14dc"
-        			},
-        			{
-        				"label": "Maximo Integration",
-        				"value": 4104,
-        				"color": "#ff0035"
-        			},
-        			{
-        				"label": "Self Service",
-        				"value": 70124,
-        				"color": "#00f897"
-        			},
-        			{
-        				"label": "Twitter",
-        				"value": 1558,
-        				"color": "#2426e6"
-        			}
+              {
+                "label": "Citizen Connect App",
+                "value": 330570,
+                "color": "#00c9ff"
+              },
+              {
+                "label": "City Worker App",
+                "value": 110319,
+                "color": "#128bd7"
+              },
+              {
+                "label": "Constituent Calls",
+                "value": 459601,
+                "color": "#ffbb33"
+              },
+              {
+                "label": "Employee Generated",
+                "value": 72299,
+                "color": "#2661d6"
+              },
+              {
+                "label": "Self Service",
+                "value": 70124,
+                "color": "#e88829"
+              },
+              {
+                "label": "Twitter",
+                "value": 1558,
+                "color": "#2426e6"
+              }
         		]
         	},
         	"labels": {
         		"outer": {
-        			"pieDistance": 26
+        			"pieDistance": 23
         		},
         		"inner": {
-        			"hideWhenLessThanPercentage": 1
+        			"hideWhenLessThanPercentage": 3
         		},
         		"mainLabel": {
-        			"color": "#f0ebeb",
-        			"fontSize": 15
+        			"color": "#fbfafa",
+        			"fontSize": 12
         		},
         		"percentage": {
         			"color": "#ffffff",
-        			"fontSize": 18,
-        			"decimalPlaces": 1
+        			"fontSize": 12,
+        			"decimalPlaces": 0
         		},
         		"value": {
         			"color": "#adadad",
-        			"fontSize": 15
+        			"fontSize": 14
         		},
         		"lines": {
         			"enabled": true
@@ -218,33 +215,23 @@ var WAYPOINT3 = new Waypoint({
         	"tooltips": {
         		"enabled": true,
         		"type": "placeholder",
-        		"string": "{label}: {value} calls, {percentage}%",
+        		"string": "{label}: {value}, {percentage}%",
         		"styles": {
-        			"backgroundColor": "#121313",
-        			"backgroundOpacity": 0.48,
-        			"color": "#eeecec",
-        			"borderRadius": 3,
-        			"fontSize": 15,
-        			"padding": 5
+        			"borderRadius": 4,
+        			"fontSize": 14,
+        			"padding": 8
         		}
         	},
         	"effects": {
         		"pullOutSegmentOnClick": {
         			"effect": "linear",
         			"speed": 400,
-        			"size": 12
+        			"size": 8
         		}
         	},
-        	"misc": {
-        		"gradient": {
-        			"enabled": true,
-        			"percentage": 100
-        		}
-        	}
+        	"callbacks": {}
         });
-    } else if(direction === "up") {
-
-    }
+    } else {}
   }
 });
 

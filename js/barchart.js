@@ -3,6 +3,7 @@
 var margin = {top: 60, right: 20, bottom: 60, left: 50};
     width = document.querySelector("#barchart").clientWidth + 300;
     height = 600;
+
 // var svg = d3.select("#barchart")
 //     .append("svg")
 //     .attr("width", width + margin.right + margin.left)
@@ -16,7 +17,7 @@ var svg = d3.select("#barchart")
   .attr("height", "100%")
   .attr('viewBox','-50 -50 1000 500')
   .attr('preserveAspectRatio','xMinYMin');
-  
+
 // Define data
 
 var data = [
@@ -99,10 +100,6 @@ var area = svg.selectAll(".area")
     .enter().append('g')
     .attr("class", "area")
     .attr("transform", d => `translate(${xScale(d.area)}, 0)`);
-
-
-
-
 
 // Chart 1
 
