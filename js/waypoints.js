@@ -148,7 +148,7 @@ var WAYPOINT3 = new Waypoint({
                     "location": "bottom-left"
                 },
                 "size": {
-                    "canvasHeight": width/1.3,
+                    "canvasHeight": width/1.2,
                     "canvasWidth": 820,
                     "pieOuterRadius": "86%"
                 },
@@ -182,7 +182,7 @@ var WAYPOINT3 = new Waypoint({
                         {
                             "label": "Twitter",
                             "value": 1558,
-                            "color": "#2426e6"
+                            "color": "#f91904"
                         }
                     ]
                 },
