@@ -120,12 +120,14 @@ a:hover {
 
 #embeddedtweet1 {
   margin-left: 15%;
-  width: 150%;
 }
 
 #embeddedtweet2 {
   margin-left: 15%;
-  width: 150%;
+}
+
+#embeddedtweet3 {
+  margin-left: 15%;
 }
 
 #cover{
