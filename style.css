@@ -1,8 +1,9 @@
 /* Imported styles */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Cardo');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 
 /* ----- Type selector styles ----- */
 article {
@@ -15,11 +16,11 @@ h1 {
   padding-top: 0;
   color:  white;
   font-weight: bold;
-  font-family: Libre Baskerville;
+  font-family: Montserrat, Helvetica, sans-serif;
   line-height: 1.5;
   float: left;
   z-index: 2000;
-  font-size: 5vw;
+  font-size: 5.3vw;
 }
 
 h2 {
